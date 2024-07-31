@@ -818,7 +818,7 @@ footer {
 /* Media query per dispositivi mobili */
 @media (max-width: 768px) {
   .commission-container {
-      grid-template-columns: repeat(2, 1fr); /* Due colonne per dispositivi mobili */
+      grid-template-columns: repeat(1, 1fr); /* Due colonne per dispositivi mobili */
   }
 }
 
