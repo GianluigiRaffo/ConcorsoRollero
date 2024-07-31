@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Premio Corrado Rollero</title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav container">
+            <div class="nav__data">
+               <a href="index.html" class="nav__logo">
+                  <img src="Immagini/LogoBianco.svg" alt="Premio Corrado Rollero" class="nav__logo-img">
+                    Premio "Corrado Rollero"
+              </a>
+               
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="iscriviti.html" class="nav__link">Iscriviti</a></li>
+
+                  <li><a href="calendario.html" class="nav__link">Calendario</a></li>
+
+                  <!--=============== DROPDOWN 1 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Categorie <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="pianoforte.html" class="dropdown__link">
+                              <i class="ri-music-line"></i> Pianoforte
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="chitarra.html" class="dropdown__link">
+                              <i class="ri-music-line"></i> Chitarra
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="strumentifiato.html" class="dropdown__link">
+                              <i class="ri-music-line"></i> Strumenti a fiato
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="camera.html" class="dropdown__link">
+                              <i class="ri-music-line"></i> Formazioni da camera
+                           </a>
+                        </li>
+
+                        
+                     </ul>
+                  </li>
+                  <li><a href="vincitori.html" class="nav__link">Vincitori 1° ed.</a></li>
+                  <li><a href="faq.html" class="nav__link">Domande Frequenti (F.A.Q.)</a></li>
+
+                  <!-- DROPDOWN MENU
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Users <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-user-line"></i> Profiles
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-lock-line"></i> Accounts
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-message-3-line"></i> Messages
+                           </a>
+                        </li>
+                     </ul>
+                  </li> 
+                  <!-->
+                  <li><a href="regolamento.html" class="nav__link">Regolamento</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <main>
+         <section class="pagine-title">
+             <h2>Domande Frequenti</h2>
+         </section>
+
+            <section class="faq">
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleAnswer(this)">
+                        <span>Entro quando è possibile iscriversi al concorso?</span>
+                        <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+                    <div class="faq__answer">
+                        <p>È possibile iscriversi entro e non oltre il 22 Febbraio 2025.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleAnswer(this)">
+                        <span>Come posso iscrivermi?</span>
+                        <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Puoi iscriverti online attraverso il nostro sito web nella sezione <a href="#"><strong>Iscriviti</strong></a>. <br>Verrai reindirizzato ad un apposito modulo da compilare.</p>
+                        <p>È necessario versare la quota di iscrizione tramite bonifico bancario intestato a:<br>
+                           <strong>CORPO BANDISTICO DI CASARZA LIGURE</strong><br>
+                           <strong>IBAN:</strong> IT91P0503431920000000000772</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                  <div class="faq__question" onclick="toggleAnswer(this)">
+                      <span>Non riesco ad iscrivermi tramite il modulo google form, come posso fare?</span>
+                      <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+                  <div class="faq__answer">
+                      <p>Se non si è in possesso di un account Google o per qualsiasi motivo tecnico il modulo non dovesse funzionare, in alternativa è possibile iscriversi via PEC inviando la domanda all’indirizzo bandacasarza@pec.it
+                        allegando <a href="#"><strong>questo modulo</strong></a> compilato.</p>
+                     <p>È necessario versare la quota di iscrizione tramite bonifico bancario intestato a:<br>
+                           <strong>CORPO BANDISTICO DI CASARZA LIGURE</strong><br>
+                           <strong>IBAN:</strong> IT91P0503431920000000000772</p>
+                  </div>
+              </div>
+              <div class="faq__item">
+               <div class="faq__question" onclick="toggleAnswer(this)">
+                   <span>A quanto ammonta la quota di iscrizione?</span>
+                   <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+               </div>
+               <div class="faq__answer">
+                   <p><strong>Per le categorie soliste</strong> (qualunque strumento) la quota di iscrizione è di 20€.</p>
+                   <p><strong>Per le formazioni da camera</strong> la quota di iscrizione è di 15€ a componente.</p>
+                   <p>È necessario versare la quota di iscrizione tramite bonifico bancario intestato a:<br>
+                     <strong>CORPO BANDISTICO DI CASARZA LIGURE</strong><br>
+                     <strong>IBAN:</strong> IT91P0503431920000000000772</p>
+               </div>
+           </div>
+                <!-- Aggiungi altre domande qui -->
+            </section>
+            <div class="spacer"></div>
+        </main>
+     
+         <footer>
+             <p>&copy; 2024 Concorso Nazionale Premio "Corrado Rollero". Tutti i diritti riservati.</p>
+         </footer>
+         <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
