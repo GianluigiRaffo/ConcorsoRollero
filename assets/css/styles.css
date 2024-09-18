@@ -10,7 +10,7 @@
   --black-color-light: hsl(0, 0%, 10%);
   --black-color-lighten: hsl(0, 0%, 14%);
   --white-color: #fff;
-  --body-color: hsl(220, 100%, 97%);
+  --body-color: hsl(0, 14%, 93%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -901,7 +901,7 @@ body {
 }
 
 .faq__item {
-  background-color: hsl(220, 100%, 97%);
+  background-color: hsl(0, 14%, 93%);
   margin-bottom: 1rem;
   border-radius: 20px;
   overflow: hidden;
