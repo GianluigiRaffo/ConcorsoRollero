@@ -1058,3 +1058,42 @@ body {
 .winner__score {
   font-style: italic;
 }
+
+/* Stili per le tabelle */
+table {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Bordi arrotondati */
+  overflow: hidden; /* Mantiene i bordi arrotondati anche con contenuti */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #CE203C;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Tabelle per comunicazioni e concerto */
+.comunicazione, .concerto {
+  font-weight: bold;
+  background-color: #ffeb3b;
+  border-radius: 10px;
+}
+
+.comunicazione td, .concerto td {
+  padding: 15px;
+  font-size: 1.2em;
+}
