@@ -4,7 +4,14 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <link rel="icon" type="image/svg+xml" href="Immagini/LogoBianco.svg"
+      <link rel="icon" type="image/svg+xml" href="Immagini/LogoBianco.svg">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"></noscript>
+      <link rel="preload" as="image" href="assets/css/playing-piano.jpg" fetchpriority="high">
 
       <!--=============== REMIXICONS ===============-->
       <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
@@ -17,94 +24,11 @@
       <meta name="theme-color" content="hsl(0, 0%, 8%)">
    </head>
    <body>
-      <!--=============== HEADER ===============-->
-      <header class="header">
-         <nav class="nav container">
-            <div class="nav__data">
-               <a href="index.html" class="nav__logo">
-                  <img src="Immagini/LogoBianco.svg" alt="Premio Corrado Rollero" class="nav__logo-img">
-                    Premio "Corrado Rollero"
-              </a>
-               
-               <div class="nav__toggle" id="nav-toggle">
-                  <i class="ri-menu-line nav__burger"></i>
-                  <i class="ri-close-line nav__close"></i>
-               </div>
-            </div>
-
-            <!--=============== NAV MENU ===============-->
-            <div class="nav__menu" id="nav-menu">
-               <ul class="nav__list">
-                  <li><a href="iscriviti.html" class="nav__link">Iscriviti</a></li>
-
-                  <li><a href="calendario.html" class="nav__link">Calendario</a></li>
-
-                  <!--=============== DROPDOWN 1 ===============-->
-                  <li class="dropdown__item">
-                     <div class="nav__link">
-                        Categorie <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                     </div>
-
-                     <ul class="dropdown__menu">
-                        <li>
-                           <a href="pianoforte.html" class="dropdown__link">
-                              <i class="ri-music-line"></i> Pianoforte
-                           </a>                          
-                        </li>
-
-                        <li>
-                           <a href="chitarra.html" class="dropdown__link">
-                              <i class="ri-music-line"></i> Chitarra
-                           </a>
-                        </li>
-
-                        <li>
-                           <a href="strumentifiato.html" class="dropdown__link">
-                              <i class="ri-music-line"></i> Strumenti a fiato
-                           </a>
-                        </li>
-
-                        <li>
-                           <a href="camera.html" class="dropdown__link">
-                              <i class="ri-music-line"></i> Musica d'assieme
-                           </a>
-                        </li>
-
-                        
-                     </ul>
-                  </li>
-
-                  <li class="dropdown__item">
-                     <div class="nav__link">
-                        Vincitori <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                     </div>
-
-                     <ul class="dropdown__menu">
-                        <li>
-                           <a href="vincitori2025.html" class="dropdown__link">
-                              <i class="ri-trophy-line"></i> Vincitori 2° Edizione
-                           </a>                          
-                        </li>
-
-                        <li>
-                           <a href="vincitori2024.html" class="dropdown__link">
-                              <i class="ri-trophy-line"></i> Vincitori 1° Edizione
-                           </a>
-                        </li>
-                     </ul>
-                  </li> 
-
-                  <li><a href="faq.html" class="nav__link">Domande Frequenti (F.A.Q.)</a></li>
-
-                  <li><a href="regolamento.html" class="nav__link">Regolamento</a></li>
-               </ul>
-            </div>
-         </nav>
-      </header>
+      <div id="site-header"></div>
       <main>
    
          <div class="parallax" id="parallax">
-            <div class="parallax__bg"></div>
+          <img class="parallax__bg" src="assets/css/playing-piano.jpg" alt="" fetchpriority="high" loading="eager" decoding="async">
             <div class="parallax__inner">
             <h1>
                 <span class="title-part-1">3° Concorso Nazionale</span><br class="desktop-only">
@@ -120,7 +44,7 @@
                 <p>Il Concorso si terrà presso la biblioteca e l’Auditorium di <strong>Villa Sottanis</strong> a <strong>Casarza Ligure</strong> (GE) i giorni <strong>28</strong> e <strong>29 marzo 2026</strong>.</p>
             </section>
             <section class="intro-text">
-               <p> <em>ideato dal Corpo Bandistico di Casarza Ligure e della Val Petronio in collaborazione con il Comune di Casarza Ligure, il Lions Club di Sestri Levante e e l'associazione culturale "Lo Stregatto". </em>
+               <p> <em>ideato dal Corpo Bandistico di Casarza Ligure e della Val Petronio in collaborazione con il Comune di Casarza Ligure, il Lions Club di Sestri Levante e l'associazione culturale "Lo Stregatto". </em>
                </p>
             </section>
         
@@ -132,48 +56,27 @@
         
             <div class="categories-wrapper">
             <div class="categories-container">
-                <div class="category">
                  <a href="pianoforte.html" class="category">
-                    <img src="Immagini/piano.jpg" alt="Pianoforte" width="800" height="600">
+                    <img src="Immagini/piano.jpg" alt="Pianoforte" width="800" height="600" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="category-imgscritta">Pianoforte</div>
-                  </a>
-                </div>
-                <div class="category">
+                 </a>
                   <a href="chitarra.html" class="category">
-                    <img src="Immagini/guitar.jpg" alt="Chitarra" width="800" height="600">
+                    <img src="Immagini/guitar.jpg" alt="Chitarra" width="800" height="600" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="category-imgscritta">Chitarra</div>
                   </a>
-                </div>
-                <div class="category">
                   <a href="camera.html" class="category">
-                    <img src="Immagini/chamber_music.jpg" alt="Formazione da camera" width="800" height="600">
+                    <img src="Immagini/chamber_music.jpg" alt="Formazione da camera" width="800" height="600" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="category-imgscritta">Musica d'assieme</div>
                   </a>
-                </div>
-                <div class="category">
                   <a href="strumentifiato.html" class="category">
-                    <img src="Immagini/wind_instruments.jpg" alt="Strumenti a fiato" width="800" height="600">
+                    <img src="Immagini/wind_instruments.jpg" alt="Strumenti a fiato" width="800" height="600" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="category-imgscritta">Strumenti <br>a fiato</div>
                   </a>
-                </div>
             </div>
             </div>
             </section>
         
-          <!-- Call to Action Section -->
-          <div class="cta">
-            <h2>Iscriviti al Concorso</h2>
-            
-            <h1>Iscrizioni entro il 20 Marzo 2026</h1>
-              <a href="https://forms.gle/rys2NTW1gbsQVrL97" class="cta-button">Iscriviti <i class="ri-arrow-right-s-line"></i></a>
-              <p> </p>
-              <p>Il pagamento va eseguito entro e non oltre il 20/03/2026 tramite bonifico bancario intestato a<br>
-               <strong>CORPO BANDISTICO DI CASARZA LIGURE</strong><br>
-               <strong>IBAN:</strong> IT91P0503431920000000000772</p>
-              <p>In alternativa è possibile iscriversi via PEC inviando la domanda all’indirizzo <a href="mailto:bandacasarza@pec.it">bandacasarza@pec.it</a>.
-                 allegando <a href="https://drive.google.com/file/d/1PHOoITAwCpgxbdqgfhc4SLb2A19SZFdb/view?usp=sharing">questo modulo</a> compilato.</p>
-         </div>
-         <!-- End of Call to Action Section -->
+          <div id="shared-cta-iscrizione"></div>
           <!-- CTA Vincitori -->
           <section class="cta-vincitori">
             <div class="cta__vincitori">
@@ -191,9 +94,7 @@
 
         </main>
 
-         <footer>
-             <p>&copy; 2025 Concorso Nazionale Premio "Corrado Rollero". Tutti i diritti riservati.</p>
-         </footer>
+         <div id="site-footer"></div>
          <!--=============== MAIN JS ===============-->
          <script src="assets/js/main.js"></script>
    </body>
