@@ -1169,13 +1169,25 @@ tr:nth-child(even) {
 }
 
 /* Tabelle per comunicazioni e concerto */
-.comunicazione, .concerto {
+.comunicazione {
   font-weight: bold;
   background-color: #ffeb3b;
   border-radius: 10px;
 }
 
-.comunicazione td, .concerto td {
+.comunicazione td {
+  padding: 15px;
+  font-size: 1.2em;
+}
+
+.concerto {
+  font-weight: bold;
+  background-color: #CE203C;
+  border-radius: 10px;
+}
+
+.concerto td {
+  color: #fff;
   padding: 15px;
   font-size: 1.2em;
 }
