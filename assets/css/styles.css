@@ -57,7 +57,7 @@ a {
 /*=============== REUSABLE CSS CLASSES ===============*/
 
 .container {
-  max-width: 1220px;
+  max-width: 1440px;
   margin-inline: 1.5rem;
 }
 
@@ -760,6 +760,163 @@ footer {
 @media screen and (min-width: 1024px) {
   .pagine-title h2 {
     padding-top: 5%; /* Ancora meno padding per grandi schermi */
+  }
+}
+
+.masterclass-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 128px;
+  margin-bottom: 1rem;
+}
+
+.masterclass-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.masterclass-title {
+  font-size: 1.45rem;
+  font-weight: 300;
+  margin-bottom: 0.25rem;
+  color: #1f1f1f;
+  line-height: 1.2;
+}
+
+.masterclass-subtitle {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: #111;
+  line-height: 1.1;
+}
+
+.masterclass-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.masterclass-details {
+  max-width: 1200px;
+  margin: 3rem auto 3rem;
+  padding: 0 1rem;
+  text-align: left;
+}
+
+.masterclass-date,
+.masterclass-location,
+.masterclass-accordion,
+.masterclass-cta {
+  margin: 2rem 0 0;
+  padding: 0 1rem;
+}
+
+.masterclass-date {
+  font-size: 2rem;
+  line-height: 1.2;
+  color: #222;
+  margin-bottom: 4rem; /* Spazio tra "Settembre 2026" e "Auditorium di Villa Sottanis" */
+}
+
+.masterclass-location {
+  max-width: 100%;
+  margin-top: 4rem; /* Spazio tra "Auditorium di Villa Sottanis" e l'accordion "Curriculum" */
+}
+
+.masterclass-location-name {
+  font-size: 2rem;
+  margin-bottom: 0.35rem;
+  color: #111;
+}
+
+.masterclass-location-city {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.masterclass-accordion {
+  max-width: 100%;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  margin-top: 2rem; /* Spazio tra "Casarza Ligure (GE)" e l'accordion "Curriculum" */
+}
+
+.masterclass-accordion .faq__item {
+  overflow: hidden;
+}
+
+.masterclass-cta {
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
+.masterclass-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.masterclass-cta p {
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 0.75rem;
+}
+
+.masterclass-cta a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .masterclass-hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .masterclass-photo {
+    width: 170px;
+    height: 170px;
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .masterclass-hero {
+    padding: 0 1rem;
+    margin-top: 64px;
+  }
+
+  .masterclass-title {
+    font-size: 1.2rem;
+  }
+
+  .masterclass-subtitle {
+    font-size: 1.8rem;
+  }
+
+  .masterclass-date {
+    font-size: 1.6rem;
+  }
+
+  .masterclass-location-name {
+    font-size: 1.5rem;
+  }
+
+  .masterclass-date,
+  .masterclass-location,
+  .masterclass-accordion,
+  .masterclass-cta {
+    padding: 1rem 1rem;
+    margin: 1rem 0 0;
   }
 }
 
