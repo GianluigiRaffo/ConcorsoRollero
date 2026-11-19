@@ -99,6 +99,10 @@ img { max-width: 100%; }
 
 :focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
 
+@media (any-pointer: coarse) {
+  :is(a, button, summary) { -webkit-tap-highlight-color: transparent; }
+}
+
 .skip-link {
   position: fixed;
   z-index: 5;
