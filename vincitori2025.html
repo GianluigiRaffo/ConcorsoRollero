@@ -1,332 +1,389 @@
-<!DOCTYPE html>
-   <html lang="it-IT">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <link rel="icon" type="image/svg+xml" href="Immagini/LogoBianco.svg">
-
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-      <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"></noscript>
-
-      <!--=============== REMIXICONS ===============-->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
-
-      <title>Premio Corrado Rollero</title>
-
-      <meta name="theme-color" content="hsl(0, 0%, 8%)">
-   </head>
-   <body>
-      <div id="site-header"></div>
-      <main>
-         <section class="pagine-title">
-            <h2>Vincitori della 2° Edizione</h2> <h3>(2025)</h3>
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Risultati, premi e fotografie dei vincitori della seconda edizione del Premio Corrado Rollero, nel 2025.">
+  <meta name="theme-color" content="#171214">
+  <title>Vincitori 2025 | Premio Corrado Rollero</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
+  <div id="site-header">
+    <!-- shared:header -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="Home del Premio Rollero">
+          <img src="Immagini/LogoBianco.svg" alt="" width="28" height="28">
+          <span class="site-brand__name"><span class="site-brand__prefix">Premio</span> Rollero</span>
+        </a>
+        <div class="site-header__actions">
+          <a class="button button--outline site-header__cta" href="iscriviti.html">Iscriviti</a>
+          <nav class="site-nav site-nav--desktop" aria-label="Navigazione principale">
+            <a href="index.html">Home</a>
+            <div class="site-nav__group">
+              <a href="concorso.html" data-section-pages="pianoforte.html chitarra.html strumentifiato.html camera.html calendario.html regolamento.html faq.html">Categorie</a>
+              <button class="site-nav__toggle" type="button" aria-label="Sottomenu Categorie" aria-controls="nav-categorie" aria-expanded="false" hidden><span class="material-symbol" aria-hidden="true">expand_more</span></button>
+              <div class="site-nav__dropdown" id="nav-categorie" hidden>
+                <a href="pianoforte.html">Pianoforte</a>
+                <a href="chitarra.html">Chitarra</a>
+                <a href="strumentifiato.html">Strumenti a fiato</a>
+                <a href="camera.html">Musica d’assieme</a>
+              </div>
+            </div>
+            <div class="site-nav__group">
+              <a href="eventi.html" data-section-pages="rassegna.html masterclassclarinetto.html">Eventi</a>
+              <button class="site-nav__toggle" type="button" aria-label="Sottomenu Eventi" aria-controls="nav-eventi" aria-expanded="false" hidden><span class="material-symbol" aria-hidden="true">expand_more</span></button>
+              <div class="site-nav__dropdown" id="nav-eventi" hidden>
+                <a href="rassegna.html">Rassegna Concertistica</a>
+                <a href="masterclassclarinetto.html">Masterclass di clarinetto</a>
+              </div>
+            </div>
+            <div class="site-nav__group">
+              <a href="edizioni.html" data-section-pages="vincitori2026.html vincitori2025.html vincitori2024.html">Edizioni passate</a>
+              <button class="site-nav__toggle" type="button" aria-label="Sottomenu Edizioni passate" aria-controls="nav-edizioni" aria-expanded="false" hidden><span class="material-symbol" aria-hidden="true">expand_more</span></button>
+              <div class="site-nav__dropdown" id="nav-edizioni" hidden>
+                <a href="vincitori2026.html">3ª edizione · 2026</a>
+                <a href="edizioni.html">Edizioni precedenti</a>
+              </div>
+            </div>
+          </nav>
+          <details class="site-menu">
+            <summary class="site-menu__toggle" aria-label="Menu">
+              <img class="menu-icon menu-icon--open" src="assets/icons/menu.svg" width="24" height="24" alt="">
+              <img class="menu-icon menu-icon--close" src="assets/icons/close.svg" width="24" height="24" alt="">
+            </summary>
+            <nav class="site-nav site-menu__panel" aria-label="Navigazione principale">
+              <a href="index.html"><span class="material-symbol" aria-hidden="true">home</span>Home</a>
+              <a href="iscriviti.html"><span class="material-symbol" aria-hidden="true">assignment</span>Iscrizioni</a>
+              <a href="concorso.html" data-section-pages="pianoforte.html chitarra.html strumentifiato.html camera.html calendario.html regolamento.html faq.html"><span class="material-symbol" aria-hidden="true">music_note</span>Categorie</a>
+              <a href="eventi.html" data-section-pages="rassegna.html masterclassclarinetto.html"><span class="material-symbol" aria-hidden="true">event</span>Eventi</a>
+              <a href="edizioni.html" data-section-pages="vincitori2026.html vincitori2025.html vincitori2024.html"><span class="material-symbol" aria-hidden="true">emoji_events</span>Edizioni passate</a>
+            </nav>
+          </details>
+        </div>
+      </div>
+    </header>
+    <!-- /shared:header -->
+  </div>
+  <main id="contenuto" class="content-page">
+    <section class="pagine-title">
+            <h1>Vincitori della 2° Edizione</h1> <p class="winner-edition-year">(2025)</p>
         </section>
         
-      <section class="faq">
+      <section class="vincitori__section" aria-label="Risultati per categoria">
 
-      <div class="faq__item">
-         <div class="faq__question" onclick="toggleAnswer(this)">
+      <details class="faq__item" name="faq">
+         <summary class="faq__question">
             <span>Premi Speciali</span>
-            <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-         </div>
+         </summary>
          <div class="faq__answer">
             <div class="accordion__winner">
                <div class="winner__text">
-                 <h3 class="winner__prize">Premio "Corrado Rollero"</h3>
+                 <p class="winner__prize">Premio "Corrado Rollero"</p>
                  <p class="winner__name">Dante Malerba</p>
                </div>
                <div class="winner__photo">
-                 <img src="Immagini\vincitori\2025\Dante-Malerba.jpg" alt="Nome Vincitore">
+                 <img src="Immagini/vincitori/2025/Dante-Malerba.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
                </div>
              </div>
              <hr class="separator">
              <div class="accordion__winner">
                <div class="winner__text">
-                 <h3 class="winner__prize">Premio speciale "Giovane Promessa"</h3>
+                 <p class="winner__prize">Premio speciale "Giovane Promessa"</p>
                  <p class="winner__name">Lorenzo Budeanu</p>
                </div>
                <div class="winner__photo">
-                 <img src="Immagini\vincitori\2025\Lorenzo-Budeanu.jpg" alt="Lorenzo Budeanu">
+                 <img src="Immagini/vincitori/2025/Lorenzo-Budeanu.webp" alt="Lorenzo Budeanu" width="640" height="640" loading="lazy" decoding="async">
                </div>
              </div>
              <hr class="separator">
              <div class="accordion__winner">
                <div class="winner__text">
-                 <h3 class="winner__prize">Premio speciale "Giovane Promessa"</h3>
+                 <p class="winner__prize">Premio speciale "Giovane Promessa"</p>
                  <p class="winner__name">Antonio Valente</p>
                </div>
                <div class="winner__photo">
-                 <img src="Immagini\vincitori\2025\Antonio-Valente.jpg" alt="Nome Vincitore">
+                 <img src="Immagini/vincitori/2025/Antonio-Valente.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
                </div>
              </div>
          </div>
-      </div>
+      </details>
 
-         <h3>Pianoforte</h3>
-         <div class="faq__item">
-             <div class="faq__question" onclick="toggleAnswer(this)">
+         <h2 class="winner-group-title">Pianoforte</h2>
+         <details class="faq__item" name="faq">
+             <summary class="faq__question">
                  <span>Categoria A1</span>
-                 <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-             </div>
+             </summary>
              <div class="faq__answer">
                <div class="accordion__winner">
                   <div class="winner__text">
-                    <h3 class="winner__prize">1° Premio Assoluto</h3>
+                    <p class="winner__prize">1° Premio Assoluto</p>
                     <p class="winner__name">Stefania Magnani</p>
                     <p class="winner__score"><em>Punteggio 97/100</em></p>
                   </div>
                   <div class="winner__photo">
-                    <img src="Immagini\vincitori\2025\Stefania-Magnani.jpg" alt="Nome vincitore">
+                    <img src="Immagini/vincitori/2025/Stefania-Magnani.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
                   </div>
                 </div>
                 <hr class="separator">
                 <div class="accordion__winner">
                   <div class="winner__text">
-                    <h3 class="winner__prize">1° Premio</h3>
+                    <p class="winner__prize">1° Premio</p>
                     <p class="winner__name">Lorenzo Budeanu</p>
                     <p class="winner__score"><em>Punteggio 96/100</em></p>
                   </div>
                   <div class="winner__photo">
-                    <img src="Immagini\vincitori\2025\Lorenzo-Budeanu.jpg" alt="Nome vincitore">
+                    <img src="Immagini/vincitori/2025/Lorenzo-Budeanu.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
                   </div>
                 </div>
                <!-- Aggiungi altri vincitori qui -->
              </div>
-         </div>
-         <div class="faq__item">
-             <div class="faq__question" onclick="toggleAnswer(this)">
+         </details>
+         <details class="faq__item" name="faq">
+             <summary class="faq__question">
                  <span>Categoria A2</span>
-                 <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-             </div>
+             </summary>
              <div class="faq__answer">
                 <hr class="separator">
                 <div class="accordion__winner">
                   <div class="winner__text">
-                    <h3 class="winner__prize">2° Premio</h3>
+                    <p class="winner__prize">2° Premio</p>
                     <p class="winner__name">Agnese Rovinalti</p>
                     <p class="winner__score"><em>Punteggio 92/100</em></p>
                   </div>
                   <div class="winner__photo">
-                    <img src="Immagini\vincitori\2025\Agnese-Rovinalti.jpg" alt="Nome vincitore">
+                    <img src="Immagini/vincitori/2025/Agnese-Rovinalti.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
                   </div>
                <!-- Aggiungi altri vincitori qui -->
                </div>
             </div>
-         </div>
-         <div class="faq__item">
-             <div class="faq__question" onclick="toggleAnswer(this)">
+         </details>
+         <details class="faq__item" name="faq">
+             <summary class="faq__question">
                  <span>Categoria A3</span>
-                 <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-             </div>
+             </summary>
              <div class="faq__answer">
                <div class="accordion__winner">
                   <div class="winner__text">
-                    <h3 class="winner__prize">1° Premio Assoluto</h3>
+                    <p class="winner__prize">1° Premio Assoluto</p>
                     <p class="winner__name">Dante Malerba</p>
                     <p class="winner__score"><em>Punteggio 100/100</em></p>
                   </div>
                   <div class="winner__photo">
-                    <img src="Immagini\vincitori\2025\Dante-Malerba.jpg" alt="Nome vincitore">
+                    <img src="Immagini/vincitori/2025/Dante-Malerba.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
                   </div>
                 </div>
                <!-- Aggiungi altri vincitori qui -->
              </div>
-         </div>
-         <div class="faq__item">
-             <div class="faq__question" onclick="toggleAnswer(this)">
+         </details>
+         <details class="faq__item" name="faq">
+             <summary class="faq__question">
                  <span>Categoria A4</span>
-                 <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-             </div>
+             </summary>
              <div class="faq__answer">
                <div class="accordion__winner">
                   <div class="winner__text">
-                    <h3 class="winner__prize">1° Premio Assoluto</h3>
+                    <p class="winner__prize">1° Premio Assoluto</p>
                     <p class="winner__name">Mario Calogiuri Isolabella</p>
                     <p class="winner__score"><em>Punteggio 95/100</em></p>
                   </div>
                   <div class="winner__photo">
-                    <img src="Immagini\vincitori\2025\Mario-Calogiuri-Isolabella.jpg" alt="Nome vincitore">
+                    <img src="Immagini/vincitori/2025/Mario-Calogiuri-Isolabella.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
                   </div>
                 </div>
                 </div>
                <!-- Aggiungi altri vincitori qui -->
-             </div>
+             </details>
          </div>
         
-      <h3>Chitarra</h3>
-    <div class="faq__item">
-      <div class="faq__question" onclick="toggleAnswer(this)">
+      <h2 class="winner-group-title">Chitarra</h2>
+    <details class="faq__item" name="faq">
+      <summary class="faq__question">
           <span>Categoria B2</span>
-          <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-      </div>
+      </summary>
       <div class="faq__answer">
          <div class="accordion__winner">
             <div class="winner__text">
-              <h3 class="winner__prize">2° Premio</h3>
+              <p class="winner__prize">2° Premio</p>
               <p class="winner__name">Alice Grosso</p>
               <p class="winner__score"><em>Punteggio 91/100</em></p>
             </div>
             <div class="winner__photo">
-              <img src="Immagini\vincitori\2025\Alice-Grosso.jpg" alt="Alice Grosso">
+              <img src="Immagini/vincitori/2025/Alice-Grosso.webp" alt="Alice Grosso" width="640" height="640" loading="lazy" decoding="async">
             </div>
           </div>
           <hr class="separator">
           <div class="accordion__winner">
              <div class="winner__text">
-               <h3 class="winner__prize">2° Premio</h3>
+               <p class="winner__prize">2° Premio</p>
                <p class="winner__name">Massimo Caruso</p>
                <p class="winner__score"><em>Punteggio 86/100</em></p>
              </div>
              <div class="winner__photo">
-               <img src="Immagini\vincitori\2025\Massimo-Caruso.jpg" alt="Massimo Caruso">
+               <img src="Immagini/vincitori/2025/Massimo-Caruso.webp" alt="Massimo Caruso" width="640" height="640" loading="lazy" decoding="async">
              </div>
            </div>
         <!-- Aggiungi altri vincitori qui -->
       </div>
-   </div>
+   </details>
 </div>
 
-<h3>Strumenti a fiato</h3>
-      <div class="faq__item">
-         <div class="faq__question" onclick="toggleAnswer(this)">
+<h2 class="winner-group-title">Strumenti a fiato</h2>
+      <details class="faq__item" name="faq">
+         <summary class="faq__question">
             <span>Categoria C1</span>
-            <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-         </div>
+         </summary>
          <div class="faq__answer">
             <div class="accordion__winner">
                <div class="winner__text">
-                 <h3 class="winner__prize">1° Premio Assoluto</h3>
+                 <p class="winner__prize">1° Premio Assoluto</p>
                  <p class="winner__name">Antonio Valente</p>
                  <p class="winner__score"><em>Punteggio 100/100</em></p>
                </div>
                <div class="winner__photo">
-                 <img src="Immagini\vincitori\2025\Antonio-Valente.jpg" alt="Nome Vincitore">
+                 <img src="Immagini/vincitori/2025/Antonio-Valente.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
                </div>
              </div>
          </div>
-      </div>
-      <div class="faq__item">
-         <div class="faq__question" onclick="toggleAnswer(this)">
+      </details>
+      <details class="faq__item" name="faq">
+         <summary class="faq__question">
             <span>Categoria C2</span>
-            <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-         </div>
+         </summary>
          <div class="faq__answer">
             <div class="accordion__winner">
                <div class="winner__text">
-                 <h3 class="winner__prize">1° Premio Assoluto</h3>
+                 <p class="winner__prize">1° Premio Assoluto</p>
                  <p class="winner__name">Mattia Gradinati</p>
                  <p class="winner__score"><em>Punteggio 95/100</em></p>
                </div>
                <div class="winner__photo">
-                 <img src="Immagini\vincitori\2025\Mattia-Gradinati.jpg" alt="Mattia Gradinati">
+                 <img src="Immagini/vincitori/2025/Mattia-Gradinati.webp" alt="Mattia Gradinati" width="640" height="640" loading="lazy" decoding="async">
                </div>
              </div>
          </div>
-      </div>
-      <div class="faq__item">
-         <div class="faq__question" onclick="toggleAnswer(this)">
+      </details>
+      <details class="faq__item" name="faq">
+         <summary class="faq__question">
             <span>Categoria C3</span>
-            <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-         </div>
+         </summary>
          <div class="faq__answer">
             <div class="accordion__winner">
                <div class="winner__text">
-                 <h3 class="winner__prize">1° Premio Assoluto</h3>
+                 <p class="winner__prize">1° Premio Assoluto</p>
                  <p class="winner__name">Gabriele Gandolfo</p>
                  <p class="winner__score"><em>Punteggio 96/100</em></p>
                </div>
                <div class="winner__photo">
-                 <img src="Immagini\vincitori\2025\Gabriele-Gandolfo.jpg" alt="Nome Vincitore">
+                 <img src="Immagini/vincitori/2025/Gabriele-Gandolfo.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
                </div>
              </div>
          </div>
-      </div>
-      <div class="faq__item">
-         <div class="faq__question" onclick="toggleAnswer(this)">
+      </details>
+      <details class="faq__item" name="faq">
+         <summary class="faq__question">
             <span>Categoria C4</span>
-            <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-         </div>
+         </summary>
          <div class="faq__answer">
             <div class="accordion__winner">
                <div class="winner__text">
-                 <h3 class="winner__prize">1° Premio Assoluto</h3>
+                 <p class="winner__prize">1° Premio Assoluto</p>
                  <p class="winner__name">Giada Parodi</p>
                  <p class="winner__score"><em>Punteggio 96/100</em></p>
                </div>
                <div class="winner__photo">
-                 <img src="Immagini\vincitori\2025\Giada-Parodi.jpg" alt="Nome Vincitore">
+                 <img src="Immagini/vincitori/2025/Giada-Parodi.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
                </div>
              </div>
              <hr class="separator">
              <div class="accordion__winner">
                <div class="winner__text">
-                 <h3 class="winner__prize">1° Premio</h3>
+                 <p class="winner__prize">1° Premio</p>
                  <p class="winner__name">Pietro Piva</p>
                  <p class="winner__score"><em>Punteggio 95/100</em></p>
                </div>
                <div class="winner__photo">
-                 <img src="Immagini\vincitori\2025\Pietro-Piva.jpg" alt="Nome Vincitore">
+                 <img src="Immagini/vincitori/2025/Pietro-Piva.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
                </div>
              </div>
          </div>
-      </div>
+      </details>
 
-      <h3>Musica d'assieme</h3>
-      <div class="faq__item">
-         <div class="faq__question" onclick="toggleAnswer(this)">
+      <h2 class="winner-group-title">Musica d'assieme</h2>
+      <details class="faq__item" name="faq">
+         <summary class="faq__question">
             <span>Categoria D</span>
-            <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-         </div>
+         </summary>
          <div class="faq__answer">
             <div class="accordion__winner">
                <div class="winner__text">
-                 <h3 class="winner__prize">1° Premio Assoluto</h3>
+                 <p class="winner__prize">1° Premio Assoluto</p>
                  <p class="winner__name">Gli Obbligati</p>
                  <p class="winner__score"><em>Punteggio 95/100</em></p>
                </div>
                <div class="winner__photo">
-                 <img src="Immagini\vincitori\2025\Gli-Obbligati.jpg" alt="Nome Vincitore">
+                 <img src="Immagini/vincitori/2025/Gli-Obbligati.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
                </div>
              </div>
              <hr class="separator">
              <div class="accordion__winner">
              <div class="winner__text">
-               <h3 class="winner__prize">2° Premio</h3>
+               <p class="winner__prize">2° Premio</p>
                <p class="winner__name">Duo di flauti Albino-Costa Scuola Secondaria di 1°Grado V.G. Rossi</p>
                <p class="winner__score"><em>Punteggio 94/100</em></p>
              </div>
              <div class="winner__photo">
-                 <img src="Immagini\vincitori\2025\Duo-Albino-Costa.jpg" alt="Nome Vincitore">
+                 <img src="Immagini/vincitori/2025/Duo-Albino-Costa.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
                </div>
             </div>
            <hr class="separator">
            <div class="accordion__winner">
            <div class="winner__text">
-            <h3 class="winner__prize">2° Premio</h3>
+            <p class="winner__prize">2° Premio</p>
             <p class="winner__name">"Banda Piccola" - Società Filarmonica "Guido Moretti"</p>
             <p class="winner__score"><em>Punteggio 94/100</em></p>
           </div>
           <div class="winner__photo">
-                 <img src="Immagini\vincitori\2025\Banda-Piccola.jpg" alt="Nome Vincitore">
+                 <img src="Immagini/vincitori/2025/Banda-Piccola.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
             </div>
             </div>
         </div>
-      </div>
+      </details>
       </div>
   <!-- Aggiungi altre domande qui -->
      </section>
-       </main>
-   
-     
-         <div id="site-footer"></div>
-                     <!--=============== MAIN JS ===============-->
-                     <script src="assets/js/main.js"></script>
-   </body>
+  </main>
+  <div id="site-footer">
+    <!-- shared:footer -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <a class="site-brand" href="index.html" aria-label="Home del Premio Rollero">
+            <img src="Immagini/LogoBianco.svg" alt="" width="28" height="28" loading="lazy">
+            <span>Premio Rollero</span>
+          </a>
+          <ul class="site-footer__links">
+            <li><a href="iscriviti.html">Iscrizioni</a></li>
+            <li><a href="regolamento.html">Regolamento</a></li>
+            <li><a href="faq.html">Domande frequenti</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__credits">
+          <p><strong>Ideato da</strong><br>Corpo Bandistico di Casarza Ligure e della Val Petronio</p>
+          <p><strong>In collaborazione con</strong><br>Comune di Casarza Ligure, Lions Club di Sestri Levante e associazione culturale «Lo Stregatto»</p>
+        </div>
+        <div class="site-footer__partners">
+          <div><p>Con l’aiuto di</p><img src="Immagini/Loghi/MECI.svg" alt="MECI" width="224" height="56" loading="lazy"></div>
+          <div><p>Con il patrocinio di</p><img src="Immagini/Loghi/logoregioneliguria.svg" alt="Regione Liguria" width="251" height="251" loading="lazy"></div>
+        </div>
+        <p class="site-footer__copyright">© 2025 Concorso Nazionale Premio «Corrado Rollero». Tutti i diritti riservati.</p>
+      </div>
+    </footer>
+    <!-- /shared:footer -->
+  </div>
+</body>
 </html>

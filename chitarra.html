@@ -1,57 +1,114 @@
-<!DOCTYPE html>
-   <html lang="it-IT">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-      <link rel="icon" type="image/svg+xml" href="Immagini/LogoBianco.svg">
-
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-      <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"></noscript>
-
-      <!--=============== REMIXICONS ===============-->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
-
-      <title>Premio Corrado Rollero</title>
-
-      <meta name="theme-color" content="hsl(0, 0%, 8%)">
-   </head>
-   <body>
-      <div id="site-header"></div>
-
-      <main>    
-      <section class="pagine-title">
-         <h2>Chitarra</h2>
-      </section>
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fasce d’età, durata delle prove e commissione della categoria Chitarra del Premio Corrado Rollero.">
+  <meta name="theme-color" content="#171214">
+  <title>Chitarra | Premio Corrado Rollero</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
+  <div id="site-header">
+    <!-- shared:header -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="Home del Premio Rollero">
+          <img src="Immagini/LogoBianco.svg" alt="" width="28" height="28">
+          <span class="site-brand__name"><span class="site-brand__prefix">Premio</span> Rollero</span>
+        </a>
+        <div class="site-header__actions">
+          <a class="button button--outline site-header__cta" href="iscriviti.html">Iscriviti</a>
+          <nav class="site-nav site-nav--desktop" aria-label="Navigazione principale">
+            <a href="index.html">Home</a>
+            <div class="site-nav__group">
+              <a href="concorso.html" data-section-pages="pianoforte.html chitarra.html strumentifiato.html camera.html calendario.html regolamento.html faq.html">Categorie</a>
+              <button class="site-nav__toggle" type="button" aria-label="Sottomenu Categorie" aria-controls="nav-categorie" aria-expanded="false" hidden><span class="material-symbol" aria-hidden="true">expand_more</span></button>
+              <div class="site-nav__dropdown" id="nav-categorie" hidden>
+                <a href="pianoforte.html">Pianoforte</a>
+                <a href="chitarra.html">Chitarra</a>
+                <a href="strumentifiato.html">Strumenti a fiato</a>
+                <a href="camera.html">Musica d’assieme</a>
+              </div>
+            </div>
+            <div class="site-nav__group">
+              <a href="eventi.html" data-section-pages="rassegna.html masterclassclarinetto.html">Eventi</a>
+              <button class="site-nav__toggle" type="button" aria-label="Sottomenu Eventi" aria-controls="nav-eventi" aria-expanded="false" hidden><span class="material-symbol" aria-hidden="true">expand_more</span></button>
+              <div class="site-nav__dropdown" id="nav-eventi" hidden>
+                <a href="rassegna.html">Rassegna Concertistica</a>
+                <a href="masterclassclarinetto.html">Masterclass di clarinetto</a>
+              </div>
+            </div>
+            <div class="site-nav__group">
+              <a href="edizioni.html" data-section-pages="vincitori2026.html vincitori2025.html vincitori2024.html">Edizioni passate</a>
+              <button class="site-nav__toggle" type="button" aria-label="Sottomenu Edizioni passate" aria-controls="nav-edizioni" aria-expanded="false" hidden><span class="material-symbol" aria-hidden="true">expand_more</span></button>
+              <div class="site-nav__dropdown" id="nav-edizioni" hidden>
+                <a href="vincitori2026.html">3ª edizione · 2026</a>
+                <a href="edizioni.html">Edizioni precedenti</a>
+              </div>
+            </div>
+          </nav>
+          <details class="site-menu">
+            <summary class="site-menu__toggle" aria-label="Menu">
+              <img class="menu-icon menu-icon--open" src="assets/icons/menu.svg" width="24" height="24" alt="">
+              <img class="menu-icon menu-icon--close" src="assets/icons/close.svg" width="24" height="24" alt="">
+            </summary>
+            <nav class="site-nav site-menu__panel" aria-label="Navigazione principale">
+              <a href="index.html"><span class="material-symbol" aria-hidden="true">home</span>Home</a>
+              <a href="iscriviti.html"><span class="material-symbol" aria-hidden="true">assignment</span>Iscrizioni</a>
+              <a href="concorso.html" data-section-pages="pianoforte.html chitarra.html strumentifiato.html camera.html calendario.html regolamento.html faq.html"><span class="material-symbol" aria-hidden="true">music_note</span>Categorie</a>
+              <a href="eventi.html" data-section-pages="rassegna.html masterclassclarinetto.html"><span class="material-symbol" aria-hidden="true">event</span>Eventi</a>
+              <a href="edizioni.html" data-section-pages="vincitori2026.html vincitori2025.html vincitori2024.html"><span class="material-symbol" aria-hidden="true">emoji_events</span>Edizioni passate</a>
+            </nav>
+          </details>
+        </div>
+      </div>
+    </header>
+    <!-- /shared:header -->
+  </div>
+  <main id="contenuto" class="content-page content-page--wide">
+    <header class="category-heading">
+        <div><a href="concorso.html">Categorie</a><h1>Chitarra</h1></div>
+        <img src="Immagini/categorie/chitarra.webp" alt="" width="704" height="528" fetchpriority="high">
+      </header>
       <section class="pagine-title">
             <p>
                <strong>Categoria B</strong>: solisti (Chitarra)
             </p>
-            <ul class="custom-list">
-               <li><strong>B1 - classe 2013 e anni successivi</strong>: Durata massima 5 MINUTI</li>
-               <li><strong>B2 - classe 2011-2012</strong>: Durata massima 6 MINUTI</li>
-               <li><strong>B3 - classe 2009-2010</strong>: Durata massima 8 MINUTI</li>
-               <li><strong>B4 - classe 2008-2007</strong>: Durata massima 10 MINUTI</li>
+            <ul class="category-classes" role="list">
+               <li>
+                 <strong><span class="category-classes__code">B1</span> <span>Classe 2014 e anni successivi</span></strong>
+                 <span class="category-classes__duration">Durata massima <b>5 minuti</b></span>
+               </li>
+               <li>
+                 <strong><span class="category-classes__code">B2</span> <span>Classe 2012-2013</span></strong>
+                 <span class="category-classes__duration">Durata massima <b>6 minuti</b></span>
+               </li>
+               <li>
+                 <strong><span class="category-classes__code">B3</span> <span>Classe 2010-2011</span></strong>
+                 <span class="category-classes__duration">Durata massima <b>8 minuti</b></span>
+               </li>
+               <li>
+                 <strong><span class="category-classes__code">B4</span> <span>Classe 2008-2009</span></strong>
+                 <span class="category-classes__duration">Durata massima <b>10 minuti</b></span>
+               </li>
             </ul>
       </section>
 <!-- Sezione Commissione -->
 
 <section class="pagine-title">
-   <h1>La Commissione</h1>
+   <h2>La Commissione</h2>
 </section>
 
 <section class="commission-section">
 <div class="commission-container">
  <div class="commission-member">
-     <img src="Immagini\Commissione\elena-bellinzona.png" alt="Membro 1">
-     <h3>Elena Bellinzona</h3>
-     <span class="curriculum-link">Curriculum <i class="ri-arrow-down-s-line dropdown__arrow"></i></span>
+     <img src="Immagini/Commissione/elena-bellinzona.webp" alt="" width="500" height="500" loading="lazy" decoding="async">
+     <details class="curriculum-panel">
+       <summary class="curriculum-link">Elena Bellinzona<span class="material-symbol" aria-hidden="true">expand_more</span></summary>
      <div class="curriculum">
          <p>
             Elena Bellinzona ha frequentato il Liceo Classico Federico Delpino di Chiavari e, nel 2017, si è iscritta al Conservatorio Niccolò Paganini di Genova, dove ha conseguito il Diploma Accademico di II livello in chitarra classica con la valutazione di 110/110.
@@ -63,11 +120,12 @@
             Attualmente, Elena Bellinzona insegna privatamente in diverse scuole di musica, tra cui l’Accademia Musicale Giuseppe Verdi di Chiavari, la Scuola di Musica Depietri di Casarza Ligure e la Scuola di Musica Pucciarelli di Lavagna.
          </p>
      </div>
+                 </details>
  </div>
  <div class="commission-member">
-     <img src="Immagini\Commissione\mauro-bonelli.png" alt="Membro 2">
-     <h3>Mauro Bonelli</h3>
-     <span class="curriculum-link">Curriculum <i class="ri-arrow-down-s-line dropdown__arrow"></i></span>
+     <img src="Immagini/Commissione/mauro-bonelli.webp" alt="" width="470" height="470" loading="lazy" decoding="async">
+     <details class="curriculum-panel">
+       <summary class="curriculum-link">Mauro Bonelli<span class="material-symbol" aria-hidden="true">expand_more</span></summary>
      <div class="curriculum">
          <p><p>Diplomato in Chitarra e Composizione, svolge da molti anni un'intensa attività
             didattica e artistico-musicale, ha insegnato Chitarra nei conservatori di musica
@@ -102,11 +160,12 @@
             suoi "Tre Capricci" per chitarra sola. E' Presidente di commissione al Concorso
             Chitarristico Internazionale "Città di Stresa".</p></p>
      </div>
+                 </details>
  </div>
  <div class="commission-member">
-     <img src="Immagini\Commissione\gabriella-solari.jpg" alt="Membro 3">
-     <h3>Gabriella Solari</h3>
-     <span class="curriculum-link">Curriculum <i class="ri-arrow-down-s-line dropdown__arrow"></i></span>
+     <img src="Immagini/Commissione/gabriella-solari.webp" alt="" width="342" height="342" loading="lazy" decoding="async">
+     <details class="curriculum-panel">
+       <summary class="curriculum-link">Gabriella Solari<span class="material-symbol" aria-hidden="true">expand_more</span></summary>
      <div class="curriculum">
          <p><p>Gabriella Solari, dopo aver conseguito il Diploma di Maturità in Arti Applicate si laurea presso l’Ateneo genovese in Lettere su una tesi storico musicale con il massimo dei voti e la lode. Si diploma brillantemente in chitarra, sotto la guida del M.° Giuseppe Briasco ed in Didattica della Musica presso il Conservatorio di Musica “N. Paganini” di Genova. In seguito si è perfezionata con i Maestri Guido Margaria e Guillermo Fierens per il repertorio moderno e nel repertorio antico su strumenti originali (liuto e chitarra barocca) con il M.° Ugo Nastrucci.</p>
 
@@ -118,16 +177,51 @@
             
             <p>In veste di chitarrista e flautista dolce svolge varia attività concertistica di musica da camera.</p></p>
      </div>
+                 </details>
  </div>
  <!-- Aggiungi più membri come necessario -->
 </div>
 </section>
 
-<div id="shared-cta-iscrizione"></div>
-      </main>
-      
-          <div id="site-footer"></div>
-         <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
-   </body>
+<div id="shared-cta-iscrizione">
+  <!-- shared:cta-iscrizione -->
+  <section class="registration-callout">
+    <div>
+      <h2>Iscrizioni al concorso</h2>
+      <p>Quote, indicazioni per il pagamento e modulo Google dell’edizione 2027.</p>
+    </div>
+    <a class="button button--outline" href="iscriviti.html">Iscrizioni</a>
+  </section>
+  <!-- /shared:cta-iscrizione -->
+</div>
+  </main>
+  <div id="site-footer">
+    <!-- shared:footer -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <a class="site-brand" href="index.html" aria-label="Home del Premio Rollero">
+            <img src="Immagini/LogoBianco.svg" alt="" width="28" height="28" loading="lazy">
+            <span>Premio Rollero</span>
+          </a>
+          <ul class="site-footer__links">
+            <li><a href="iscriviti.html">Iscrizioni</a></li>
+            <li><a href="regolamento.html">Regolamento</a></li>
+            <li><a href="faq.html">Domande frequenti</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__credits">
+          <p><strong>Ideato da</strong><br>Corpo Bandistico di Casarza Ligure e della Val Petronio</p>
+          <p><strong>In collaborazione con</strong><br>Comune di Casarza Ligure, Lions Club di Sestri Levante e associazione culturale «Lo Stregatto»</p>
+        </div>
+        <div class="site-footer__partners">
+          <div><p>Con l’aiuto di</p><img src="Immagini/Loghi/MECI.svg" alt="MECI" width="224" height="56" loading="lazy"></div>
+          <div><p>Con il patrocinio di</p><img src="Immagini/Loghi/logoregioneliguria.svg" alt="Regione Liguria" width="251" height="251" loading="lazy"></div>
+        </div>
+        <p class="site-footer__copyright">© 2025 Concorso Nazionale Premio «Corrado Rollero». Tutti i diritti riservati.</p>
+      </div>
+    </footer>
+    <!-- /shared:footer -->
+  </div>
+</body>
 </html>

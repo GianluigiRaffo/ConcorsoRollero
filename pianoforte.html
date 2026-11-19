@@ -1,50 +1,110 @@
-<!DOCTYPE html>
-   <html lang="it-IT">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fasce d’età, durata delle prove, brano d’obbligo e commissione della categoria Pianoforte del Premio Corrado Rollero.">
+  <meta name="theme-color" content="#171214">
+  <title>Pianoforte | Premio Corrado Rollero</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
+  <div id="site-header">
+    <!-- shared:header -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="Home del Premio Rollero">
+          <img src="Immagini/LogoBianco.svg" alt="" width="28" height="28">
+          <span class="site-brand__name"><span class="site-brand__prefix">Premio</span> Rollero</span>
+        </a>
+        <div class="site-header__actions">
+          <a class="button button--outline site-header__cta" href="iscriviti.html">Iscriviti</a>
+          <nav class="site-nav site-nav--desktop" aria-label="Navigazione principale">
+            <a href="index.html">Home</a>
+            <div class="site-nav__group">
+              <a href="concorso.html" data-section-pages="pianoforte.html chitarra.html strumentifiato.html camera.html calendario.html regolamento.html faq.html">Categorie</a>
+              <button class="site-nav__toggle" type="button" aria-label="Sottomenu Categorie" aria-controls="nav-categorie" aria-expanded="false" hidden><span class="material-symbol" aria-hidden="true">expand_more</span></button>
+              <div class="site-nav__dropdown" id="nav-categorie" hidden>
+                <a href="pianoforte.html">Pianoforte</a>
+                <a href="chitarra.html">Chitarra</a>
+                <a href="strumentifiato.html">Strumenti a fiato</a>
+                <a href="camera.html">Musica d’assieme</a>
+              </div>
+            </div>
+            <div class="site-nav__group">
+              <a href="eventi.html" data-section-pages="rassegna.html masterclassclarinetto.html">Eventi</a>
+              <button class="site-nav__toggle" type="button" aria-label="Sottomenu Eventi" aria-controls="nav-eventi" aria-expanded="false" hidden><span class="material-symbol" aria-hidden="true">expand_more</span></button>
+              <div class="site-nav__dropdown" id="nav-eventi" hidden>
+                <a href="rassegna.html">Rassegna Concertistica</a>
+                <a href="masterclassclarinetto.html">Masterclass di clarinetto</a>
+              </div>
+            </div>
+            <div class="site-nav__group">
+              <a href="edizioni.html" data-section-pages="vincitori2026.html vincitori2025.html vincitori2024.html">Edizioni passate</a>
+              <button class="site-nav__toggle" type="button" aria-label="Sottomenu Edizioni passate" aria-controls="nav-edizioni" aria-expanded="false" hidden><span class="material-symbol" aria-hidden="true">expand_more</span></button>
+              <div class="site-nav__dropdown" id="nav-edizioni" hidden>
+                <a href="vincitori2026.html">3ª edizione · 2026</a>
+                <a href="edizioni.html">Edizioni precedenti</a>
+              </div>
+            </div>
+          </nav>
+          <details class="site-menu">
+            <summary class="site-menu__toggle" aria-label="Menu">
+              <img class="menu-icon menu-icon--open" src="assets/icons/menu.svg" width="24" height="24" alt="">
+              <img class="menu-icon menu-icon--close" src="assets/icons/close.svg" width="24" height="24" alt="">
+            </summary>
+            <nav class="site-nav site-menu__panel" aria-label="Navigazione principale">
+              <a href="index.html"><span class="material-symbol" aria-hidden="true">home</span>Home</a>
+              <a href="iscriviti.html"><span class="material-symbol" aria-hidden="true">assignment</span>Iscrizioni</a>
+              <a href="concorso.html" data-section-pages="pianoforte.html chitarra.html strumentifiato.html camera.html calendario.html regolamento.html faq.html"><span class="material-symbol" aria-hidden="true">music_note</span>Categorie</a>
+              <a href="eventi.html" data-section-pages="rassegna.html masterclassclarinetto.html"><span class="material-symbol" aria-hidden="true">event</span>Eventi</a>
+              <a href="edizioni.html" data-section-pages="vincitori2026.html vincitori2025.html vincitori2024.html"><span class="material-symbol" aria-hidden="true">emoji_events</span>Edizioni passate</a>
+            </nav>
+          </details>
+        </div>
+      </div>
+    </header>
+    <!-- /shared:header -->
+  </div>
+  <main id="contenuto" class="content-page content-page--wide">
+    <!--=============== MAIN JS ===============-->
 
-    <link rel="icon" type="image/svg+xml" href="Immagini/LogoBianco.svg">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"></noscript>
-
-      <!--=============== REMIXICONS ===============-->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
-
-      <title>Premio Corrado Rollero</title>
-
-      <meta name="theme-color" content="hsl(0, 0%, 8%)">
-   </head>
-   <body>
-      <div id="site-header"></div>
-
-      <main>
-         <!--=============== MAIN JS ===============-->
-         <script src="assets/js/main.js"></script>
-        
-            <section class="pagine-title">
-                <h2>Pianoforte</h2>
-            </section>
+<header class="category-heading">
+        <div><a href="concorso.html">Categorie</a><h1>Pianoforte</h1></div>
+        <img src="Immagini/categorie/pianoforte.webp" alt="" width="704" height="528" fetchpriority="high">
+      </header>
             <section class="pagine-title">
                   <p>
                       <strong>Categoria A</strong>: solisti (Pianoforte) - Premio “Corrado Rollero”
                   </p>
-                  <ul class="custom-list">
-                     <li><strong>A1 - classe 2013 e anni successivi</strong>: Durata massima 5 MINUTI</li>
-                      <li><strong>A2 - classe 2011-2012</strong>: Durata massima 6 MINUTI</li>
-                      <li><strong>A3 - classe 2009-2010</strong>: Durata massima 8 MINUTI</li>
-                      <li><strong>A4 - classe 2008-2007</strong>: Durata massima 10 MINUTI</li>
+                  <ul class="category-classes" role="list">
+                     <li>
+                       <strong><span class="category-classes__code">A1</span> <span>Classe 2014 e anni successivi</span></strong>
+                       <span class="category-classes__duration">Durata massima <b>5 minuti</b></span>
+                     </li>
+                      <li>
+                        <strong><span class="category-classes__code">A2</span> <span>Classe 2012-2013</span></strong>
+                        <span class="category-classes__duration">Durata massima <b>6 minuti</b></span>
+                      </li>
+                      <li>
+                        <strong><span class="category-classes__code">A3</span> <span>Classe 2010-2011</span></strong>
+                        <span class="category-classes__duration">Durata massima <b>8 minuti</b></span>
+                      </li>
+                      <li>
+                        <strong><span class="category-classes__code">A4</span> <span>Classe 2008-2009</span></strong>
+                        <span class="category-classes__duration">Durata massima <b>10 minuti</b></span>
+                      </li>
                   </ul>
+                  <p class="piano-programme">
+                      Per le classi <strong>A1</strong> e <strong>A2</strong> la prova sarà composta da un programma a libera scelta della durata complessiva come sopra descritto.
+                  </p>
+                  <p class="piano-programme">
+                      Per le classi <strong>A3</strong> e <strong>A4</strong> la prova sarà composta da un pezzo d'obbligo più un programma a libera scelta della durata massima complessiva come sopra descritto.
+                  </p>
                   <p>
-                      Per le classi <strong>A1</strong> e <strong>A2</strong> la prova sarà composta da un programma a libera scelta della durata complessiva come sopra descritto.<br>
-                      Per le classi <strong>A3</strong> e <strong>A4</strong> la prova sarà composta da un pezzo d'obbligo più un programma a libera scelta della durata massima complessiva come sopra descritto.<br>
                       Brano d'obbligo per le classi <strong>A3</strong> e <strong>A4</strong>:
                   </p>
                   <a href="https://drive.google.com/file/d/1PI8cqjGN02nA5RjItI2y2zSB40BU6BLW/view?usp=drive_link"><strong><u>Corrado Rollero: Piccolo valzer in do minore Op.21 N° 1.</u></strong></a>
@@ -52,15 +112,15 @@
             <!-- Sezione Commissione -->
    
             <section class="pagine-title">
-               <h1>La Commissione</h1>
+               <h2>La Commissione</h2>
            </section>
    
        <section class="commission-section">
          <div class="commission-container">
              <div class="commission-member">
-                 <img src="Immagini\Commissione\franco-trabucco.jpg" alt="Membro 1">
-                 <h3>Franco Trabucco</h3>
-                 <span class="curriculum-link">Curriculum <i class="ri-arrow-down-s-line dropdown__arrow"></i></span>
+                 <img src="Immagini/Commissione/franco-trabucco.webp" alt="" width="600" height="600" loading="lazy" decoding="async">
+                 <details class="curriculum-panel">
+                   <summary class="curriculum-link">Franco Trabucco<span class="material-symbol" aria-hidden="true">expand_more</span></summary>
                  <div class="curriculum">
                      <p><p>Nato a Leivi (GE) ha compiuto gli studi musicali presso il Conservatorio Niccolò Paganini di Genova, diplomandosi con il massimo dei voti in pianoforte sotto la guida di Criscuolo e in organo sotto quella di Molfino.</p>
 
@@ -70,21 +130,23 @@
                         
                         <p>Classificato e vincitore in numerosi concorsi pianistici nazionali ed internazionali, come il “Casagrande” di Terni, il “Beethoven” indetto dalla televisione italiana del 1970, il “Sergio Lorenzi” all’Accademia Musicale Chigiana di Siena, e altri. Collaboratore al concorso violinistico internazionale “Paganini” di Genova, al Premio “Città Vittorio Veneto” ed ai Seminari internazionali tenuti da Salvatore Accardo e Uto Ughi.</p></p>
                  </div>
+                 </details>
              </div>
              <div class="commission-member">
-                 <img src="Immagini\Commissione\morgillo-simone.jpg" alt="Membro 2">
-                 <h3>Simone Morgillo</h3>
-                 <span class="curriculum-link">Curriculum <i class="ri-arrow-down-s-line dropdown__arrow"></i></span>
+                 <img src="Immagini/Commissione/morgillo-simone.webp" alt="" width="540" height="540" loading="lazy" decoding="async">
+                 <details class="curriculum-panel">
+                   <summary class="curriculum-link">Simone Morgillo<span class="material-symbol" aria-hidden="true">expand_more</span></summary>
                  <div class="curriculum">
                      <p><p>Nato a Chiavari (GE), intraprende lo studio del pianoforte sotto la guida di Stefania Colucci presso la Società Filarmonica di Sestri Levante. Nel 2020 consegue il diploma accademico di secondo livello con il massimo dei voti e la lode sotto la guida di Anna Maria Bordin presso il Conservatorio “Niccolò Paganini” di Genova.</p>
 
                         <p>Nel 2018 ottiene il primo premio per la borsa di studio “G.Ponta”. Ha partecipato a masterclass di Levinas, Lucchesini, Martin, Proll. Si è esibito come solista e in formazione a quattro mani per “Piano No Stop”, “Avigliana…Insieme”, “Erremusica”, Scuola musicale “Giuseppe Conte”. Dal 2017 si è avvicinato alle realtà contemporanee includendo nel suo repertorio musiche di L. Brignole, C. Magnan, C. Rebora, M. Levinas.</p></p>
                  </div>
+                 </details>
              </div>
              <div class="commission-member">
-                 <img src="Immagini\Commissione\canzio-bucciarelli.jpeg" alt="Membro 3">
-                 <h3>Canzio Bucciarelli</h3>
-                 <span class="curriculum-link">Curriculum <i class="ri-arrow-down-s-line dropdown__arrow"></i></span>
+                 <img src="Immagini/Commissione/canzio-bucciarelli.webp" alt="" width="800" height="800" loading="lazy" decoding="async">
+                 <details class="curriculum-panel">
+                   <summary class="curriculum-link">Canzio Bucciarelli<span class="material-symbol" aria-hidden="true">expand_more</span></summary>
                  <div class="curriculum">
                      <p>Canzio Bucciarelli, già docente di Pianoforte Principale presso il Conservatorio N. Paganini di Genova, 
                         ha svolto attività concertistica, solistica e cameristica, come Pianista, Organista e Clavicembalista. 
@@ -124,14 +186,51 @@
                         SCHIUSO ... “ testo e musica di C. Bucciarelli sulla presentazione degli strumenti dell'orchestra 
                         sinfonica</p>
                  </div>
+                 </details>
              </div>
              <!-- Aggiungi più membri come necessario -->
          </div>
       </section>
    
-                    <div id="shared-cta-iscrizione"></div>
-        </main>
-      
-         <div id="site-footer"></div>
-   </body>
+                    <div id="shared-cta-iscrizione">
+                      <!-- shared:cta-iscrizione -->
+                      <section class="registration-callout">
+                        <div>
+                          <h2>Iscrizioni al concorso</h2>
+                          <p>Quote, indicazioni per il pagamento e modulo Google dell’edizione 2027.</p>
+                        </div>
+                        <a class="button button--outline" href="iscriviti.html">Iscrizioni</a>
+                      </section>
+                      <!-- /shared:cta-iscrizione -->
+                    </div>
+  </main>
+  <div id="site-footer">
+    <!-- shared:footer -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <a class="site-brand" href="index.html" aria-label="Home del Premio Rollero">
+            <img src="Immagini/LogoBianco.svg" alt="" width="28" height="28" loading="lazy">
+            <span>Premio Rollero</span>
+          </a>
+          <ul class="site-footer__links">
+            <li><a href="iscriviti.html">Iscrizioni</a></li>
+            <li><a href="regolamento.html">Regolamento</a></li>
+            <li><a href="faq.html">Domande frequenti</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__credits">
+          <p><strong>Ideato da</strong><br>Corpo Bandistico di Casarza Ligure e della Val Petronio</p>
+          <p><strong>In collaborazione con</strong><br>Comune di Casarza Ligure, Lions Club di Sestri Levante e associazione culturale «Lo Stregatto»</p>
+        </div>
+        <div class="site-footer__partners">
+          <div><p>Con l’aiuto di</p><img src="Immagini/Loghi/MECI.svg" alt="MECI" width="224" height="56" loading="lazy"></div>
+          <div><p>Con il patrocinio di</p><img src="Immagini/Loghi/logoregioneliguria.svg" alt="Regione Liguria" width="251" height="251" loading="lazy"></div>
+        </div>
+        <p class="site-footer__copyright">© 2025 Concorso Nazionale Premio «Corrado Rollero». Tutti i diritti riservati.</p>
+      </div>
+    </footer>
+    <!-- /shared:footer -->
+  </div>
+</body>
 </html>

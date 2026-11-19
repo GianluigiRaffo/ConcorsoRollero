@@ -1,44 +1,100 @@
-<!DOCTYPE html>
-   <html lang="it-IT">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-      <link rel="icon" type="image/svg+xml" href="Immagini/LogoBianco.svg">
-
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-      <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"></noscript>
-
-      <!--=============== REMIXICONS ===============-->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
-
-      <title>Premio Corrado Rollero</title>
-
-      <meta name="theme-color" content="hsl(0, 0%, 8%)">
-   </head>
-   <body>
-      <div id="site-header"></div>
-
-      <main>
-     
-   <section class="pagine-title">
-      <h2>Strumenti a fiato</h2>
-   </section>
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fasce d’età, durata delle prove, pianista accompagnatore e commissione della categoria Strumenti a fiato del Premio Corrado Rollero.">
+  <meta name="theme-color" content="#171214">
+  <title>Strumenti a fiato | Premio Corrado Rollero</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
+  <div id="site-header">
+    <!-- shared:header -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="Home del Premio Rollero">
+          <img src="Immagini/LogoBianco.svg" alt="" width="28" height="28">
+          <span class="site-brand__name"><span class="site-brand__prefix">Premio</span> Rollero</span>
+        </a>
+        <div class="site-header__actions">
+          <a class="button button--outline site-header__cta" href="iscriviti.html">Iscriviti</a>
+          <nav class="site-nav site-nav--desktop" aria-label="Navigazione principale">
+            <a href="index.html">Home</a>
+            <div class="site-nav__group">
+              <a href="concorso.html" data-section-pages="pianoforte.html chitarra.html strumentifiato.html camera.html calendario.html regolamento.html faq.html">Categorie</a>
+              <button class="site-nav__toggle" type="button" aria-label="Sottomenu Categorie" aria-controls="nav-categorie" aria-expanded="false" hidden><span class="material-symbol" aria-hidden="true">expand_more</span></button>
+              <div class="site-nav__dropdown" id="nav-categorie" hidden>
+                <a href="pianoforte.html">Pianoforte</a>
+                <a href="chitarra.html">Chitarra</a>
+                <a href="strumentifiato.html">Strumenti a fiato</a>
+                <a href="camera.html">Musica d’assieme</a>
+              </div>
+            </div>
+            <div class="site-nav__group">
+              <a href="eventi.html" data-section-pages="rassegna.html masterclassclarinetto.html">Eventi</a>
+              <button class="site-nav__toggle" type="button" aria-label="Sottomenu Eventi" aria-controls="nav-eventi" aria-expanded="false" hidden><span class="material-symbol" aria-hidden="true">expand_more</span></button>
+              <div class="site-nav__dropdown" id="nav-eventi" hidden>
+                <a href="rassegna.html">Rassegna Concertistica</a>
+                <a href="masterclassclarinetto.html">Masterclass di clarinetto</a>
+              </div>
+            </div>
+            <div class="site-nav__group">
+              <a href="edizioni.html" data-section-pages="vincitori2026.html vincitori2025.html vincitori2024.html">Edizioni passate</a>
+              <button class="site-nav__toggle" type="button" aria-label="Sottomenu Edizioni passate" aria-controls="nav-edizioni" aria-expanded="false" hidden><span class="material-symbol" aria-hidden="true">expand_more</span></button>
+              <div class="site-nav__dropdown" id="nav-edizioni" hidden>
+                <a href="vincitori2026.html">3ª edizione · 2026</a>
+                <a href="edizioni.html">Edizioni precedenti</a>
+              </div>
+            </div>
+          </nav>
+          <details class="site-menu">
+            <summary class="site-menu__toggle" aria-label="Menu">
+              <img class="menu-icon menu-icon--open" src="assets/icons/menu.svg" width="24" height="24" alt="">
+              <img class="menu-icon menu-icon--close" src="assets/icons/close.svg" width="24" height="24" alt="">
+            </summary>
+            <nav class="site-nav site-menu__panel" aria-label="Navigazione principale">
+              <a href="index.html"><span class="material-symbol" aria-hidden="true">home</span>Home</a>
+              <a href="iscriviti.html"><span class="material-symbol" aria-hidden="true">assignment</span>Iscrizioni</a>
+              <a href="concorso.html" data-section-pages="pianoforte.html chitarra.html strumentifiato.html camera.html calendario.html regolamento.html faq.html"><span class="material-symbol" aria-hidden="true">music_note</span>Categorie</a>
+              <a href="eventi.html" data-section-pages="rassegna.html masterclassclarinetto.html"><span class="material-symbol" aria-hidden="true">event</span>Eventi</a>
+              <a href="edizioni.html" data-section-pages="vincitori2026.html vincitori2025.html vincitori2024.html"><span class="material-symbol" aria-hidden="true">emoji_events</span>Edizioni passate</a>
+            </nav>
+          </details>
+        </div>
+      </div>
+    </header>
+    <!-- /shared:header -->
+  </div>
+  <main id="contenuto" class="content-page content-page--wide">
+    <header class="category-heading">
+        <div><a href="concorso.html">Categorie</a><h1>Strumenti a fiato</h1></div>
+        <img src="Immagini/categorie/strumenti-a-fiato.webp" width="800" height="361" alt="" fetchpriority="high">
+      </header>
    <section class="pagine-title">
       <p>
           <strong>Categoria C</strong>: solisti (Strumenti a fiato)
       </p>
-      <ul class="custom-list">
-         <li><strong>C1 - classe 2013 e anni successivi</strong>: Durata massima 5 MINUTI</li>
-          <li><strong>C2 - classe 2011-2012</strong>: Durata massima 6 MINUTI</li>
-          <li><strong>C3 - classe 2009-2010</strong>: Durata massima 8 MINUTI</li>
-          <li><strong>C4 - classe 2008-2007</strong>: Durata massima 10 MINUTI</li>
+      <ul class="category-classes" role="list">
+         <li>
+           <strong><span class="category-classes__code">C1</span> <span>Classe 2014 e anni successivi</span></strong>
+           <span class="category-classes__duration">Durata massima <b>5 minuti</b></span>
+         </li>
+          <li>
+            <strong><span class="category-classes__code">C2</span> <span>Classe 2012-2013</span></strong>
+            <span class="category-classes__duration">Durata massima <b>6 minuti</b></span>
+          </li>
+          <li>
+            <strong><span class="category-classes__code">C3</span> <span>Classe 2010-2011</span></strong>
+            <span class="category-classes__duration">Durata massima <b>8 minuti</b></span>
+          </li>
+          <li>
+            <strong><span class="category-classes__code">C4</span> <span>Classe 2008-2009</span></strong>
+            <span class="category-classes__duration">Durata massima <b>10 minuti</b></span>
+          </li>
       </ul>
       <p>L’organizzazione mette a disposizione, su richiesta, il <strong>pianista accompagnatore</strong>; in tal caso è necessario versare 
          un supplemento di <strong>20€</strong> e spedire una copia del brano per il pianista all’indirizzo <a href="mailto:corpobandisticocasarza@gmail.com">corpobandisticocasarza@gmail.com</a> unitamente alla scheda di iscrizione.</p>
@@ -46,15 +102,15 @@
 <!-- Sezione Commissione -->
 
 <section class="pagine-title">
-   <h1>La Commissione</h1>
+   <h2>La Commissione</h2>
 </section>
 
 <section class="commission-section">
 <div class="commission-container">
  <div class="commission-member">
-           <img src="Immagini\Commissione\majuran-chandrapatan.jpeg" alt="Membro 1">
-           <h3>Majuran Chandrapatham</h3>
-           <span class="curriculum-link">Curriculum <i class="ri-arrow-down-s-line dropdown__arrow"></i></span>
+           <img src="Immagini/Commissione/majuran-chandrapatan.webp" alt="" width="464" height="464" loading="lazy" decoding="async">
+           <details class="curriculum-panel">
+             <summary class="curriculum-link">Majuran Chandrapatham<span class="material-symbol" aria-hidden="true">expand_more</span></summary>
            <div class="curriculum">
                <p>trombettista e insegnante.</p> 
                <p>Nasce a Santa Margherita Ligure il 19 Gennaio 1995.</p> 
@@ -92,11 +148,12 @@
                Lucchi presso la fondazione “Accademia Nazionale di Santa Cecilia” nell’ a.a. 2023-24 e diverse masterclass e
                corsi estivi tenuti dallo stesso docente.</p>
             </div>
+                 </details>
    </div>
  <div class="commission-member">
-     <img src="Immagini\Commissione\gianluigi-raffo.png" alt="Membro 2">
-     <h3>Gianluigi Raffo</h3>
-     <span class="curriculum-link">Curriculum <i class="ri-arrow-down-s-line dropdown__arrow"></i></span>
+     <img src="Immagini/Commissione/gianluigi-raffo.webp" alt="" width="800" height="800" loading="lazy" decoding="async">
+     <details class="curriculum-panel">
+       <summary class="curriculum-link">Gianluigi Raffo<span class="material-symbol" aria-hidden="true">expand_more</span></summary>
      <div class="curriculum">
          <p>Inizia gli studi di musica a 10 anni con l'insegnante Ilaria Canale. 
 
@@ -107,11 +164,12 @@
             <p></p>Scelto per partecipare con il "Zephyrus Saxophone Quartet" all'expo di Milano 2015. Ha partecipato al 26° Festival Milano Musica eseguendo L'eco delle voci di e con Salvatore Sciarrino. Ha suonato presso l'Anton Bruckner Privatuniversität (Linz, Austria). Coinvolto nel progetto "Arte del Mascheramento" di Bruno Tommaso. Ha Insegnato nel 2022 presso il Liceo Musicale "G. Bruno" di Albenga Saxofono e Musica d'insieme.
             <p></p>Ha partecipato alla rassegna "Del sonare digitale" a Siena, accompagnando Claude Delangle nel novembre 2023.</p>
      </div>
+                 </details>
  </div>
  <div class="commission-member">
-     <img src="Immagini\Commissione\marta-caccialanza.png" alt="Membro 3">
-     <h3>Marta Caccialanza</h3>
-     <span class="curriculum-link">Curriculum <i class="ri-arrow-down-s-line dropdown__arrow"></i></span>
+     <img src="Immagini/Commissione/marta-caccialanza.webp" alt="" width="267" height="267" loading="lazy" decoding="async">
+     <details class="curriculum-panel">
+       <summary class="curriculum-link">Marta Caccialanza<span class="material-symbol" aria-hidden="true">expand_more</span></summary>
      <div class="curriculum">
          <p>Marta Caccialanza, classe 1992, nel marzo del 2017, ha conseguito il Diploma Accademico di 2° Livello in Flauto Traverso ad Indirizzo Interpretativo con la valutazione complessiva di 110/110 e lode accademica presso il Conservatorio Niccolò Paganini di Genova sotto la guida della docente E. Cecconi. Nell'a.a 2022/2023 è stata insegnante di Flauto Traverso al Liceo Statale Sandro Pertini, e insegnante di sostegno nell'Istituto Comprensivo di Sestri Levante.
 
@@ -129,11 +187,12 @@
             
             <p></p>Dopo aver vinto con un quintetto di fiati la borsa di studio “Giorgio Federico Ghedini”, ha partecipato ad un Concerto Aperitivo del Teatro Carlo Felice di Genova nell’aprile del 2017. Nell’ambito dello stesso teatro, ha partecipato alla Stagione 2015/2016 con un concerto dal titolo “La ‘Canzona’: dalla Strada al Palco” composto ad hoc per essere eseguito presso il Padiglione Italia dell’EXPO 2015 di Milano. Nello stesso anno ha vinto l’audizione come secondo flauto nell’Orchestra Nazionale dei Conservatori Italiani, eseguendo due concerti diretti dai Maestri G. Grazioli ed E. Dindo.</p>
      </div>
+                 </details>
  </div>
  <div class="commission-member">
-   <img src="Immagini\wind_instruments.jpg" alt="Membro 4">
-   <h3>Elisa Paganini</h3>
-   <span class="curriculum-link">Curriculum <i class="ri-arrow-down-s-line dropdown__arrow"></i></span>
+   <img src="Immagini/categorie/strumenti-a-fiato-commissione.webp" alt="" loading="lazy" width="800" height="600" decoding="async">
+   <details class="curriculum-panel">
+     <summary class="curriculum-link">Elisa Paganini<span class="material-symbol" aria-hidden="true">expand_more</span></summary>
    <div class="curriculum">
        <p>
          Elisa Paganini ha conseguito il diploma in clarinetto presso il Conservatorio G. Puccini di La Spezia sotto la guida del Maestro A. Damele.
@@ -143,17 +202,51 @@
          <p></p> La sua passione per l'insegnamento si manifesta anche nella costante attenzione alla crescita musicale dei giovani musicisti, con un approccio didattico attento e creativo.
        </p>
    </div>
+                 </details>
 </div>
  <!-- Aggiungi più membri come necessario -->
 </div>
 </section>
 
-<div id="shared-cta-iscrizione"></div>
-
-      </main>
-      
-          <div id="site-footer"></div>
-         <!--=============== MAIN JS ===============-->
-<script src="assets/js/main.js"></script>
-   </body>
+<div id="shared-cta-iscrizione">
+  <!-- shared:cta-iscrizione -->
+  <section class="registration-callout">
+    <div>
+      <h2>Iscrizioni al concorso</h2>
+      <p>Quote, indicazioni per il pagamento e modulo Google dell’edizione 2027.</p>
+    </div>
+    <a class="button button--outline" href="iscriviti.html">Iscrizioni</a>
+  </section>
+  <!-- /shared:cta-iscrizione -->
+</div>
+  </main>
+  <div id="site-footer">
+    <!-- shared:footer -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <a class="site-brand" href="index.html" aria-label="Home del Premio Rollero">
+            <img src="Immagini/LogoBianco.svg" alt="" width="28" height="28" loading="lazy">
+            <span>Premio Rollero</span>
+          </a>
+          <ul class="site-footer__links">
+            <li><a href="iscriviti.html">Iscrizioni</a></li>
+            <li><a href="regolamento.html">Regolamento</a></li>
+            <li><a href="faq.html">Domande frequenti</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__credits">
+          <p><strong>Ideato da</strong><br>Corpo Bandistico di Casarza Ligure e della Val Petronio</p>
+          <p><strong>In collaborazione con</strong><br>Comune di Casarza Ligure, Lions Club di Sestri Levante e associazione culturale «Lo Stregatto»</p>
+        </div>
+        <div class="site-footer__partners">
+          <div><p>Con l’aiuto di</p><img src="Immagini/Loghi/MECI.svg" alt="MECI" width="224" height="56" loading="lazy"></div>
+          <div><p>Con il patrocinio di</p><img src="Immagini/Loghi/logoregioneliguria.svg" alt="Regione Liguria" width="251" height="251" loading="lazy"></div>
+        </div>
+        <p class="site-footer__copyright">© 2025 Concorso Nazionale Premio «Corrado Rollero». Tutti i diritti riservati.</p>
+      </div>
+    </footer>
+    <!-- /shared:footer -->
+  </div>
+</body>
 </html>

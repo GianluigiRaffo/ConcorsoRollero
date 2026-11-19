@@ -1,150 +1,162 @@
-/*=============== SHOW MENU ===============*/
-const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-            nav = document.getElementById(navId)
+function setupHeader(container) {
+  if (!container) return;
 
-    if (!toggle || !nav) return
+  const menu = container.querySelector('.site-menu');
+  const toggle = menu.querySelector('summary');
+  const panel = menu.querySelector('nav');
+  const page = location.pathname.split('/').pop() || 'index.html';
+  const desktopNav = container.querySelector('.site-nav--desktop');
 
-    toggle.addEventListener('click', () => {
-        nav.classList.toggle('show-menu')
-        toggle.classList.toggle('show-icon')
-
-        if (!nav.classList.contains('show-menu')) {
-            nav.querySelectorAll('.dropdown__item.show-dropdown').forEach((item) => {
-                item.classList.remove('show-dropdown')
-            })
-        }
-    })
-}
-
-const setupMobileDropdowns = () => {
-    const dropdownItems = document.querySelectorAll('.dropdown__item')
-    if (!dropdownItems.length) return
-
-    dropdownItems.forEach((item) => {
-        const trigger = Array.from(item.children).find((child) => child.classList && child.classList.contains('nav__link'))
-        if (!trigger) return
-
-        trigger.addEventListener('click', () => {
-            if (window.innerWidth > 1118) return
-
-            const isOpen = item.classList.contains('show-dropdown')
-
-            dropdownItems.forEach((dropdownItem) => {
-                dropdownItem.classList.remove('show-dropdown')
-            })
-
-            if (!isOpen) {
-                item.classList.add('show-dropdown')
-            }
-        })
-    })
-}
-
-const loadSharedHeader = async () => {
-    const headerContainer = document.getElementById('site-header')
-    if (!headerContainer) return
-
-    try {
-        const response = await fetch('header.html')
-        if (!response.ok) throw new Error('Header non trovato')
-
-        headerContainer.innerHTML = await response.text()
-        showMenu('nav-toggle', 'nav-menu')
-        setupMobileDropdowns()
-    } catch (error) {
-        console.error('Impossibile caricare header.html:', error)
+  for (const link of container.querySelectorAll('a')) {
+    if (link.getAttribute('href') === page) {
+      link.setAttribute('aria-current', 'page');
+    } else if (link.dataset.sectionPages?.split(' ').includes(page)) {
+      link.dataset.currentSection = '';
     }
-}
+  }
 
-const loadSharedFooter = async () => {
-    const footerContainer = document.getElementById('site-footer')
-    if (!footerContainer) return
+  document.addEventListener('pointerdown', (event) => {
+    if (menu.open && !menu.contains(event.target)) menu.open = false;
+  });
 
-    try {
-        const response = await fetch('footer.html')
-        if (!response.ok) throw new Error('Footer non trovato')
+  menu.addEventListener('focusout', (event) => {
+    if (menu.open && event.relatedTarget && !menu.contains(event.relatedTarget)) menu.open = false;
+  });
 
-        footerContainer.innerHTML = await response.text()
-    } catch (error) {
-        console.error('Impossibile caricare footer.html:', error)
+  toggle.addEventListener('click', (event) => {
+    event.preventDefault();
+    // Resolve the closed panel before opening so its animations restart on the first frame.
+    if (!menu.open) void panel.offsetWidth;
+    menu.open = !menu.open;
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || !menu.open) return;
+    menu.open = false;
+    toggle.focus();
+  });
+
+  window.addEventListener('resize', () => {
+    if (menu.open && desktopNav.offsetWidth) menu.open = false;
+  });
+
+  panel.addEventListener('click', (event) => {
+    const link = event.target.closest('a');
+    if (!link) return;
+    menu.open = false;
+
+    if (link.getAttribute('aria-current') === 'page' && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+      event.preventDefault();
+      toggle.focus();
     }
+  });
+
+  setupDesktopNavigation(desktopNav);
 }
 
-const loadSharedCtaIscrizione = async () => {
-    const ctaContainer = document.getElementById('shared-cta-iscrizione')
-    if (!ctaContainer) return
+function setupDesktopNavigation(nav) {
+  let openGroup = null;
 
-    try {
-        const response = await fetch('cta-iscrizione.html')
-        if (!response.ok) throw new Error('CTA iscrizione non trovata')
-
-        ctaContainer.innerHTML = await response.text()
-    } catch (error) {
-        console.error('Impossibile caricare cta-iscrizione.html:', error)
+  function showGroup(group) {
+    if (openGroup === group) return;
+    if (openGroup) {
+      openGroup.toggle.setAttribute('aria-expanded', 'false');
+      openGroup.dropdown.hidden = true;
     }
-}
+    openGroup = group;
+    if (openGroup) {
+      openGroup.toggle.setAttribute('aria-expanded', 'true');
+      openGroup.dropdown.hidden = false;
+    }
+  }
 
-// Inizio Script per Descrizione a Scomparsa
-document.addEventListener('DOMContentLoaded', function() {
-    loadSharedHeader();
-    loadSharedFooter();
-    loadSharedCtaIscrizione();
+  for (const element of nav.querySelectorAll('.site-nav__group')) {
+    const toggle = element.querySelector('.site-nav__toggle');
+    const dropdown = document.getElementById(toggle.getAttribute('aria-controls'));
+    const group = { element, toggle, dropdown };
+    toggle.hidden = false;
 
-    const curriculumLinks = document.querySelectorAll('.curriculum-link');
-    
-    curriculumLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            const curriculum = this.nextElementSibling;
-            if (curriculum.style.display === 'none' || curriculum.style.display === '') {
-                curriculum.style.display = 'block';
-                this.classList.add('open'); // Aggiunge la classe open per ruotare la freccia
-            } else {
-                curriculum.style.display = 'none';
-                this.classList.remove('open'); // Rimuove la classe open per tornare alla posizione iniziale
-            }
-        });
+    element.addEventListener('pointerenter', (event) => {
+      if (event.pointerType === 'mouse') showGroup(group);
     });
-});
-
-// Fine Script per Descrizione a Scomparsa
-
-// Inizio Script per Effetto Parallasse
-document.addEventListener('scroll', function () {
-    const parallax = document.querySelector('.parallax__bg');
-    if (!parallax) return;
-    let scrollPosition = window.pageYOffset;
-    parallax.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
-});
-// Fine Script per Effetto Parallasse
-
-// Funzione per FAQ
-function toggleAnswer(element) {
-    const answer = element.nextElementSibling;
-    const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
-
-    document.querySelectorAll('.faq__answer').forEach(el => {
-        el.style.maxHeight = '0';
-        el.style.padding = '0 1rem';
-        el.previousElementSibling.classList.remove('active');
+    element.addEventListener('pointerleave', (event) => {
+      if (event.pointerType === 'mouse' && openGroup === group && !element.contains(document.activeElement)) showGroup(null);
     });
+    element.addEventListener('focusout', (event) => {
+      if (openGroup === group && !element.contains(event.relatedTarget) && !element.matches(':hover')) showGroup(null);
+    });
+    toggle.addEventListener('click', () => showGroup(openGroup === group ? null : group));
+  }
 
-    if (!isOpen) {
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-        answer.style.padding = '1rem';
-        element.classList.add('active');
-    } else {
-        answer.style.maxHeight = '0';
-        answer.style.padding = '0 1rem';
-        element.classList.remove('active');
-    }
+  document.addEventListener('pointerdown', (event) => {
+    if (openGroup && !openGroup.element.contains(event.target)) showGroup(null);
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || !openGroup) return;
+    if (openGroup.element.contains(document.activeElement)) openGroup.toggle.focus();
+    showGroup(null);
+  });
+  window.addEventListener('resize', () => {
+    if (!nav.offsetWidth) showGroup(null);
+  });
 }
 
-// Fine Funzione per FAQ
+function setupHomeRegistration(header) {
+  const heroButton = document.querySelector('.home-hero__cta');
+  const headerButton = header?.querySelector('.site-header__cta');
+  if (!heroButton || !headerButton) return;
 
-  
-  
-  
-  
+  function updateHeaderButton() {
+    // The sticky header covers the top of the viewport as the hero scrolls away.
+    const heroButtonBottom = heroButton.getBoundingClientRect().bottom;
+    const headerBottom = header.getBoundingClientRect().bottom;
+    headerButton.classList.toggle('is-visible', heroButtonBottom <= headerBottom);
+  }
 
+  updateHeaderButton();
+  window.addEventListener('scroll', updateHeaderButton, { passive: true });
+  window.addEventListener('resize', updateHeaderButton);
+  window.addEventListener('pageshow', updateHeaderButton);
+}
 
+function setupIbanCopy(button) {
+  if (!button) return;
+
+  const iban = document.getElementById('iban');
+  const status = document.getElementById('iban-status');
+  button.hidden = false;
+
+  button.addEventListener('click', async () => {
+    status.textContent = '';
+    const accountNumber = iban.textContent.trim();
+
+    try {
+      await navigator.clipboard.writeText(accountNumber);
+      status.textContent = 'IBAN copiato negli appunti.';
+      return;
+    } catch {
+      // Fall back to selecting the visible value when Clipboard API access is unavailable.
+    }
+
+    const selection = window.getSelection();
+    if (selection) {
+      const range = document.createRange();
+      range.selectNodeContents(iban);
+      selection.removeAllRanges();
+      selection.addRange(range);
+
+      if (document.execCommand?.('copy')) {
+        selection.removeAllRanges();
+        status.textContent = 'IBAN copiato negli appunti.';
+        return;
+      }
+    }
+
+    status.textContent = 'Copia automatica non disponibile. Puoi copiare l’IBAN manualmente.';
+  });
+}
+
+const header = document.getElementById('site-header');
+setupHeader(header);
+setupHomeRegistration(header);
+setupIbanCopy(document.querySelector('[data-copy-iban]'));

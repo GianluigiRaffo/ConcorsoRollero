@@ -1,57 +1,151 @@
-<!DOCTYPE html>
-   <html lang="it-IT">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Scadenza, quote, indicazioni per il bonifico e modulo Google per iscriversi al Premio Corrado Rollero.">
+  <meta name="theme-color" content="#171214">
+  <title>Iscrizioni | Premio Corrado Rollero</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body class="page-registration">
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
+  <div id="site-header">
+    <!-- shared:header -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="Home del Premio Rollero">
+          <img src="Immagini/LogoBianco.svg" alt="" width="28" height="28">
+          <span class="site-brand__name"><span class="site-brand__prefix">Premio</span> Rollero</span>
+        </a>
+        <div class="site-header__actions">
+          <a class="button button--outline site-header__cta" href="iscriviti.html">Iscriviti</a>
+          <nav class="site-nav site-nav--desktop" aria-label="Navigazione principale">
+            <a href="index.html">Home</a>
+            <div class="site-nav__group">
+              <a href="concorso.html" data-section-pages="pianoforte.html chitarra.html strumentifiato.html camera.html calendario.html regolamento.html faq.html">Categorie</a>
+              <button class="site-nav__toggle" type="button" aria-label="Sottomenu Categorie" aria-controls="nav-categorie" aria-expanded="false" hidden><span class="material-symbol" aria-hidden="true">expand_more</span></button>
+              <div class="site-nav__dropdown" id="nav-categorie" hidden>
+                <a href="pianoforte.html">Pianoforte</a>
+                <a href="chitarra.html">Chitarra</a>
+                <a href="strumentifiato.html">Strumenti a fiato</a>
+                <a href="camera.html">Musica d’assieme</a>
+              </div>
+            </div>
+            <div class="site-nav__group">
+              <a href="eventi.html" data-section-pages="rassegna.html masterclassclarinetto.html">Eventi</a>
+              <button class="site-nav__toggle" type="button" aria-label="Sottomenu Eventi" aria-controls="nav-eventi" aria-expanded="false" hidden><span class="material-symbol" aria-hidden="true">expand_more</span></button>
+              <div class="site-nav__dropdown" id="nav-eventi" hidden>
+                <a href="rassegna.html">Rassegna Concertistica</a>
+                <a href="masterclassclarinetto.html">Masterclass di clarinetto</a>
+              </div>
+            </div>
+            <div class="site-nav__group">
+              <a href="edizioni.html" data-section-pages="vincitori2026.html vincitori2025.html vincitori2024.html">Edizioni passate</a>
+              <button class="site-nav__toggle" type="button" aria-label="Sottomenu Edizioni passate" aria-controls="nav-edizioni" aria-expanded="false" hidden><span class="material-symbol" aria-hidden="true">expand_more</span></button>
+              <div class="site-nav__dropdown" id="nav-edizioni" hidden>
+                <a href="vincitori2026.html">3ª edizione · 2026</a>
+                <a href="edizioni.html">Edizioni precedenti</a>
+              </div>
+            </div>
+          </nav>
+          <details class="site-menu">
+            <summary class="site-menu__toggle" aria-label="Menu">
+              <img class="menu-icon menu-icon--open" src="assets/icons/menu.svg" width="24" height="24" alt="">
+              <img class="menu-icon menu-icon--close" src="assets/icons/close.svg" width="24" height="24" alt="">
+            </summary>
+            <nav class="site-nav site-menu__panel" aria-label="Navigazione principale">
+              <a href="index.html"><span class="material-symbol" aria-hidden="true">home</span>Home</a>
+              <a href="iscriviti.html"><span class="material-symbol" aria-hidden="true">assignment</span>Iscrizioni</a>
+              <a href="concorso.html" data-section-pages="pianoforte.html chitarra.html strumentifiato.html camera.html calendario.html regolamento.html faq.html"><span class="material-symbol" aria-hidden="true">music_note</span>Categorie</a>
+              <a href="eventi.html" data-section-pages="rassegna.html masterclassclarinetto.html"><span class="material-symbol" aria-hidden="true">event</span>Eventi</a>
+              <a href="edizioni.html" data-section-pages="vincitori2026.html vincitori2025.html vincitori2024.html"><span class="material-symbol" aria-hidden="true">emoji_events</span>Edizioni passate</a>
+            </nav>
+          </details>
+        </div>
+      </div>
+    </header>
+    <!-- /shared:header -->
+  </div>
+  <main id="contenuto" class="content-page registration-page">
+    <header class="page-heading">
+      <p class="eyebrow">4ª edizione · 2027</p>
+      <h1>Iscrizioni</h1>
+      <p>Versa la quota con bonifico prima di compilare il modulo.</p>
+    </header>
 
-      <link rel="icon" type="image/svg+xml" href="Immagini/LogoBianco.svg">
+    <section class="payment-card" aria-labelledby="pagamento">
+      <h2 id="pagamento">Pagamento</h2>
+      <p class="payment-card__deadline"><span>Scadenza</span><time datetime="2027-03-26">26 marzo 2027</time></p>
 
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-      <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"></noscript>
+      <div class="payment-card__fees">
+        <h3>Quote d’iscrizione</h3>
+        <dl>
+          <div><dt>Solisti (A, B, C)</dt><dd>20 €</dd></div>
+          <div><dt>Musica d’assieme (D)</dt><dd>15 € a componente</dd></div>
+          <div><dt>Pianista accompagnatore su richiesta</dt><dd>+20 €</dd></div>
+        </dl>
+      </div>
 
-      <!--=============== REMIXICONS ===============-->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+      <dl class="payment-card__bank">
+        <div><dt>Intestatario</dt><dd>Corpo Bandistico di Casarza Ligure</dd></div>
+        <div>
+          <dt>IBAN</dt>
+          <dd>
+            <div class="iban-row">
+              <span class="iban" id="iban">IT91P0503431920000000000772</span>
+              <button class="iban-copy" type="button" aria-label="Copia IBAN" title="Copia IBAN" data-copy-iban hidden>
+                <img src="assets/icons/content-copy.svg" width="24" height="24" alt="">
+              </button>
+            </div>
+            <p class="iban-status" id="iban-status" role="status"></p>
+          </dd>
+        </div>
+      </dl>
+    </section>
 
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
+    <p class="registration-note">Per il modulo, prepara i dati anagrafici dei partecipanti, il programma di esecuzione e la ricevuta del bonifico.</p>
+    <a class="button button--primary registration-form" href="https://docs.google.com/forms/d/e/1FAIpQLScSWsV2Y8OhcXGhlAw8ajCVCm7r_G1TeWpbvhv_U6NWSriFFg/viewform?usp=publish-editor">Compila il modulo</a>
 
-      <title>Premio Corrado Rollero</title>
+    <p class="registration-note registration-note--pec" id="iscrizione-pec"><strong>Alternativa via PEC.</strong> Invia il <a href="https://drive.google.com/file/d/1_2rXqm9Rhbm987jdiBvBt65UFzSmEczE/view?usp=sharing">modulo cartaceo</a> compilato all’indirizzo <a href="mailto:bandacasarza@pec.it">bandacasarza@pec.it</a>.</p>
 
-      <meta name="theme-color" content="hsl(0, 0%, 8%)">
-   </head>
-   <body>
-      <div id="site-header"></div>
-
-      <main>
-     
-      <section class="pagine-title">
-          <h2>Iscrizioni</h2>
-      </section>
-         <section class="pagine-title">
-            <p>
-               Iscrizioni ammesse entro e non oltre il <strong>22 Febbraio 2025</strong><br>
-               Prima di effettuare l'iscrizione è necessario versare la quota di iscrizione tramite bonifico bancario intestato a: <br>
-               <strong>CORPO BANDISTICO DI CASARZA LIGURE</strong> <br>
-               <strong>IBAN</strong>: IT91P0503431920000000000772
-            </p>
-            <p>   
-               <strong>Categorie A-B-C</strong> (<em>qualsiasi strumento</em>): <strong>20€</strong><br>
-               <strong>Categoria D</strong>: Musica d'assieme <strong>15€</strong> <em>a componente</em>  
-            </p>
-            <p>Per registrarsi occorre compilare <a href="https://forms.gle/rys2NTW1gbsQVrL97"><strong>questo modulo</strong></a>. Se per qualche ragione tecnica il modulo non dovesse funzionare, <br>in alternativa è possibile iscriversi via PEC inviando la domanda all’indirizzo <a href="mailto:bandacasarza@pec.it"><strong>bandacasarza@pec.it</strong></a>.
-               allegando <a href="https://drive.google.com/file/d/1PHOoITAwCpgxbdqgfhc4SLb2A19SZFdb/view?usp=sharing"><strong>questo modulo</strong></a> compilato.
-            </p>
-        </section>
-
-       <div id="shared-cta-iscrizione"></div>
-  
-      </main>
-      
-          <div id="site-footer"></div>
-         <!--=============== MAIN JS ===============-->
-<script src="assets/js/main.js"></script>
-   </body>
+    <section class="feature-card" aria-labelledby="regolamento-iscrizioni">
+      <div>
+        <h2 id="regolamento-iscrizioni">Regolamento del concorso</h2>
+        <p>Consulta i requisiti di partecipazione e le modalità delle prove.</p>
+      </div>
+      <a class="button button--outline" href="regolamento.html">Leggi il regolamento</a>
+    </section>
+  </main>
+  <div id="site-footer">
+    <!-- shared:footer -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <a class="site-brand" href="index.html" aria-label="Home del Premio Rollero">
+            <img src="Immagini/LogoBianco.svg" alt="" width="28" height="28" loading="lazy">
+            <span>Premio Rollero</span>
+          </a>
+          <ul class="site-footer__links">
+            <li><a href="iscriviti.html">Iscrizioni</a></li>
+            <li><a href="regolamento.html">Regolamento</a></li>
+            <li><a href="faq.html">Domande frequenti</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__credits">
+          <p><strong>Ideato da</strong><br>Corpo Bandistico di Casarza Ligure e della Val Petronio</p>
+          <p><strong>In collaborazione con</strong><br>Comune di Casarza Ligure, Lions Club di Sestri Levante e associazione culturale «Lo Stregatto»</p>
+        </div>
+        <div class="site-footer__partners">
+          <div><p>Con l’aiuto di</p><img src="Immagini/Loghi/MECI.svg" alt="MECI" width="224" height="56" loading="lazy"></div>
+          <div><p>Con il patrocinio di</p><img src="Immagini/Loghi/logoregioneliguria.svg" alt="Regione Liguria" width="251" height="251" loading="lazy"></div>
+        </div>
+        <p class="site-footer__copyright">© 2025 Concorso Nazionale Premio «Corrado Rollero». Tutti i diritti riservati.</p>
+      </div>
+    </footer>
+    <!-- /shared:footer -->
+  </div>
+</body>
 </html>
