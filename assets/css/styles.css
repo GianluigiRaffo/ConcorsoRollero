@@ -260,6 +260,7 @@ img { max-width: 100%; }
 
 .site-nav a:focus-visible { outline-offset: -2px; }
 .site-nav a:is(:hover, [aria-current], [data-current-section]) { background: var(--secondary-container); }
+.site-menu__panel .material-symbol { inline-size: 1em; block-size: 1em; overflow: hidden; }
 .site-menu__panel a[aria-current] .material-symbol { font-variation-settings: "FILL" 1, "wght" 500; }
 
 .site-menu[open] .site-menu__panel:not(:focus-within) a {
@@ -866,32 +867,12 @@ img { max-width: 100%; }
 .site-footer__credits { display: grid; gap: .7rem; color: var(--muted); font-size: .875rem; }
 .site-footer__credits strong { color: var(--on-surface); }
 
-.site-footer__partners {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .8rem 1.2rem;
-  align-items: start;
-  color: var(--muted);
-  font-size: .875rem;
-}
-
-.site-footer__partners img {
-  display: block;
-  width: auto;
-  height: 2.7rem;
-  max-width: 7.5rem;
-  object-fit: contain;
-  margin-top: .35rem;
-}
-
-.site-footer__patronage img { height: 4.25rem; }
-
 .site-footer__copyright { color: var(--muted); font-size: .8125rem; }
 
 @media (width < 48rem) {
+  .event-facts { grid-template-columns: minmax(max-content, 2fr) minmax(0, 3fr); }
+  .event-facts > :first-child strong { font-size: 1.375rem; white-space: nowrap; }
   .site-footer__links { justify-content: center; padding-block: 1rem; text-align: center; }
-  .site-footer__patronage { margin-inline-start: auto; text-align: end; }
-  .site-footer__patronage img { margin-inline-start: auto; }
 }
 
 @media (max-width: 23rem) {
@@ -941,9 +922,8 @@ img { max-width: 100%; }
   .site-header__inner, .site-footer__inner {
     width: min(calc(100% - 2 * clamp(1.25rem, 3vw, 3.5rem)), 104rem);
   }
-  .site-footer__inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) minmax(0, 1fr); }
+  .site-footer__inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); }
   .site-footer__copyright { grid-column: 1 / -1; }
-  .site-footer__partners { justify-content: flex-end; }
   .site-header__inner { gap: clamp(.5rem, 1.5vw, 1.6rem); }
   .site-header__actions { gap: clamp(.75rem, 2vw, 2rem); }
   .site-nav--desktop { display: flex; align-items: center; gap: clamp(.75rem, 4vw - 1.15rem, 4rem); }
